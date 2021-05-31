@@ -1,6 +1,7 @@
 // Initial State
 const initialState = {
-    unit:[]
+    unit:[],
+
 }
 
 // Action Types
@@ -14,11 +15,12 @@ export function setUnit(unit){
     }
 }
 
+
 // Reducer
 
 export default function unitReducer(state = initialState, action){
     switch(action.type){
-        case setUnit:
+        case SET_UNIT:
             return {...state, unit: action.payload}
         default:
             return {...state}

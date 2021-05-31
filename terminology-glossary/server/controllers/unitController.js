@@ -9,6 +9,7 @@ module.exports = {
         if(!user_id){
             return res.status(511).send('Admin not logged in.')
         }
+        console.log(req.body)
         console.log(name)
         console.log(definition)
         console.log(unit_id)
