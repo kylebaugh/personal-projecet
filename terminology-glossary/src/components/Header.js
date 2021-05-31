@@ -12,6 +12,7 @@ const Header = (props) => {
         axios.get('/auth/logout')
             .then(() => {
                 dispatch(clearUser())
+                localStorage.removeItem('user_id')
                 push('/')
             })
             .catch((err) => {

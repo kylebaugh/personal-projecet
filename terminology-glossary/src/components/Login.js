@@ -25,6 +25,7 @@ const Login = (props) =>{
         axios.post('/auth/login', {email, password})
             .then((res) => {
                 dispatch(setUser(res.data))
+                localStorage.setItem('user_id', JSON.stringify(res.data))
                 push('/glossary')
             })
             .catch((err) => console.log(err))
