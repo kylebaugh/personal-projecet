@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom'
 const Glossary = (props) => {
     const dispatch = useDispatch()
     const {units} = useSelector((state) => state.glossaryReducer)
-    const {user} = useSelector((state) => state.authReducer)
+    // const {user} = useSelector((state) => state.authReducer)
 
     useEffect(() => {
         axios.get('/glossary/getAllUnits')
@@ -19,7 +19,7 @@ const Glossary = (props) => {
                 console.log('Use Effect Failed')
                 console.log(err.response.status)
             })
-    }, [])
+    }, [dispatch])
 
     const handleClick = () => {
         console.log('clicky')
