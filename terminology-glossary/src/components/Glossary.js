@@ -12,7 +12,7 @@ const Glossary = (props) => {
     useEffect(() => {
         axios.get('/glossary/getAllUnits')
             .then((res) => {
-                console.log(res.data)
+                // console.log(res.data)
                 dispatch(getAllUnits(res.data))
             })
             .catch((err) => {
@@ -20,10 +20,6 @@ const Glossary = (props) => {
                 console.log(err.response.status)
             })
     }, [dispatch])
-
-    const handleClick = () => {
-        console.log('clicky')
-    }
 
     return (
         <div>
@@ -36,17 +32,14 @@ const Glossary = (props) => {
                         <section className='unitBox'
                         >
                             <Link to={`/unit/${unit.unit_id}`}>
-                                <section 
-                                    className='unitName'
-                                    onClick={handleClick} 
-                                    >{unit.name}
+                                <section className='unitName'>
+                                    {unit.name}
                                 </section>
                             </Link>
                         </section>
                     </div>
                 )
             })}
-
         </div>
     )
 }

@@ -1,6 +1,5 @@
 import axios from 'axios'
 import {getUnit} from '../redux/glossaryReducer'
-// import {addButton} from '../redux/unitReducer'
 import {useEffect, useState} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import Item from './Item'
@@ -16,15 +15,13 @@ const Unit = (props) => {
     // const [editBox, setEditBox] = useState(false)
     
     useEffect(() => {
-        console.log(props)
+        // console.log(props)
         axios.get(`/glossary/${props.match.params.unit_id}`)
             .then((res) => {
-                // console.log(res.data)
                 dispatch(getUnit(res.data))
             })
             .catch((err) => {
                 console.log('Unit Use Effect Failed')
-                // console.log(err.rersponse.status)
             })
     }, [props, dispatch])
     
@@ -35,33 +32,10 @@ const Unit = (props) => {
    const addItem = (userId, itemName, itemDefinition, unitId) => {
         axios.post('/unit/addItem', {user_id: user.user_id, name: newItemName, definition: newItemDefinition, unit_id: props.match.params.unit_id})
         .then((res) => {
-            console.log(res.data)
             window.location.reload()
         })
         .catch(err => console.log('Add Item Function Failed'))
     }
-
-    // const deleteItem = (glossary_id) => {
-    //     axios.delete(`/unit/deleteItem/${glossary_id}`)
-    //         .then((res) => {
-    //             console.log(res.data)
-    //             window.location.reload()
-    //         })
-    //         .catch(err => console.log('Delete Item Failed'))
-    // }
-
-    // const editItem = (glossary_id, name, definition) => {
-    //     axios.put(`/unit/editItem/${glossary_id}`, 
-    //         {glossary_id: glossary_id,
-    //         name: newItemName, 
-    //         definition: newItemDefinition, 
-    //         unit_id: props.match.params.unit_id})
-    //     .then((res) => {
-    //         console.log(res.data)
-    //         window.location.reload()
-    //     })
-    //     .catch(err => console.log('Edit Item Failed'))
-    // }
 
     return (
         <div>
@@ -76,7 +50,6 @@ const Unit = (props) => {
                     >Submit</button>
                 </div>}
             {unit.map((item) => {
-                console.log(item)
                 let id = item.glossary_id
                 return (
                     <Item 

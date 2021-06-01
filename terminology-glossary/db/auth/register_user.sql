@@ -1,4 +1,4 @@
 INSERT INTO users
-(email, password, admin_key, is_admin)
+(firstName, lastName, email, password, admin_key, is_admin)
 VALUES
-($1, $2, $3, false);
+($1, $2, $3, $4, $5, false);

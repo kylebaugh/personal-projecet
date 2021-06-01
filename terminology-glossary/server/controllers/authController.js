@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs')
 module.exports = {
     register: async (req, res) => {
         const db = req.app.get('db')
-        const {email, password, adminKey} = req.body
+        const {firstName, lastName, email, password, adminKey} = req.body
         const [user] = await db.auth.check_email(email)
             if(user){
                 return res.status(409).send('Email already taken')
@@ -14,14 +14,14 @@ module.exports = {
             if(adminKey === 'lastJediSucked'){
                 const salt = bcrypt.genSaltSync(10)
                 const hash = bcrypt.hashSync(password, salt)
-                const [admin] = await db.auth.register_admin(email, hash, 'lastJediSucked')
+                const [admin] = await db.auth.register_admin(firstName, lastName, email, hash, 'lastJediSucked')
                 delete admin.password
                 req.session.user = admin
                 return res.status(200).send(req.session.user)}
             if(adminKey === ''){
                 const salt = bcrypt.genSaltSync(10)
                 const hash = bcrypt.hashSync(password, salt)
-                const [user] = await db.auth.register_user(email, hash, 'user')
+                const [user] = await db.auth.register_user(firstName, lastName, email, hash, 'user')
                 delete admin.password
                 req.session.user = user
                 return res.status(200).send(req.session.user)

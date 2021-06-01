@@ -39,7 +39,7 @@ const Item = (props) => {
     }
 
     return(
-        <div className='unitBox'>
+        <div className='itemBox'>
                         <div>
                             <section className='unitName'>{item.name}</section>
                             <section className='unitDefinition'>{item.definition}</section>

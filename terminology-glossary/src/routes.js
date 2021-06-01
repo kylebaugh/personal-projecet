@@ -5,6 +5,7 @@ import Unit from './components/Unit'
 import Login from './components/Login'
 import LearnMore from './components/LearnMore'
 import Item from './components/Item'
+import Profile from './components/Profile'
 
 export default (
     <Switch>
@@ -14,6 +15,7 @@ export default (
         <Route path='/login' component={Login} />
         <Route path='/learnMore' component={LearnMore}/>
         <Route path='/item' component={Item}/>
+        <Route path='/profile' component={Profile}/>
     </Switch>
 )
 
