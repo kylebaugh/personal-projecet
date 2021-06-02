@@ -3,6 +3,11 @@ require('dotenv').config()
 const express = require('express')
 const massive = require('massive')
 const session = require('express-session')
+// const bodyParser = require('body-parser')
+// const exphbs = require('express-handlebars')
+// const path = require('path')
+// const nodemailer = require('nodemailer')
+
 
 const {CONNECTION_STRING, SERVER_PORT, SESSION_SECRET} = process.env
 
@@ -14,6 +19,18 @@ const unitCtrl = require('./controllers/unitController')
 
 //APP INSTANCE CREATED
 const app = express()
+
+// //View Engine setup
+// app.engine('handlebars', exphbs())
+// app.set('view engine', 'handlebars')
+
+// //Body Parser Middleware
+// app.use(bodyParser.urlencoded({extended: false}))
+// app.use(bodyParser.json())
+
+// //Static folder
+// app.use('/public', express.static(path.join(__dirname, 'public')))
+
 
 //TOP LEVEL MIDDLEWARE
 app.use(express.json())
