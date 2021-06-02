@@ -1,3 +1,4 @@
+import axios from 'axios'
 import {useSelector} from 'react-redux'
 
 const Profile = (props) => {
@@ -6,8 +7,12 @@ const Profile = (props) => {
 
     return(
         <div>
-            <section>{user.email}'s Profile Page</section>
-            <img src='user.picture' alt='User Profile Pic' />
+            <h1>{user.firstname}'s Profile Page</h1>
+            <div style={{display:'flex', gap:'20px', paddingRight:'25px', paddingLeft:'25px'}}>
+                <img src={user.picture} alt='User Profile Pic' />
+               {user.is_admin && <section>{user.firstname}'s Glossary Items</section>}
+               {!user.is_admin && <section>{user.firstname}'s Learning Items</section>}
+            </div>
         </div>
     )
 }

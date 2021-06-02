@@ -23,6 +23,8 @@ const Header = (props) => {
 
 
     return (
+        <div>
+
         <div style={{display:'flex', justifyContent:'space-between', backgroundColor:'white', paddingTop:'10px', paddingBottom:'10px'}}>
             {/* <header className='header'>Logo</header> */}
             <img className='header' src='https://mk0devmountainc07rxr.kinstacdn.com/wp-content/uploads/2020/10/devmountain-logo3.png' alt='DevMountainLogo'></img>
@@ -35,6 +37,8 @@ const Header = (props) => {
                     {user && <Link to ='/' onClick={logout} style={{paddingLeft:20}}>Logout</Link>}
                 </div>
             </header>
+            
+        </div>
 
         </div>
     )

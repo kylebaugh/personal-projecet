@@ -28,17 +28,18 @@ const Login = (props) =>{
             .then((res) => {
                 dispatch(setUser(res.data))
                 localStorage.setItem('user_id', JSON.stringify(res.data))
-                push('/glossary')
+                push('/profile')
             })
             .catch((err) => console.log(err))
     }
 
     const handleRegister = () => {
-        axios.post('/auth/register', {firstName, lastName, email, password, adminKey})
+        axios.post('/auth/register', {firstName, lastName, email, password, adminKey, isAdmin})
         .then((res) => {
             // console.log(res.data)
             dispatch(setUser(res.data))
-            push('/glossary')
+            localStorage.setItem('user_id', JSON.stringify(res.data))
+            push('/profile')
             })
             .catch((err) => console.log(err))
     }

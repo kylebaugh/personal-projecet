@@ -41,8 +41,10 @@ const Item = (props) => {
     return(
         <div className='itemBox'>
                         <div>
-                            <section className='unitName'>{item.name}</section>
-                            <section className='unitDefinition'>{item.definition}</section>
+                            <div className='unitName'>Title: {item.name}</div>
+                            <br></br>
+                            <div className='unitDefinition'>Definition: {item.definition}</div>
+                            <br></br>
                         </div>
                         {user && <div>
                             <button onClick={() => {toggleEdit(item.glossary_id)}}>Edit</button>

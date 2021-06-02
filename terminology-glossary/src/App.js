@@ -19,6 +19,7 @@ function App() {
     <div className="App">
       <Header />
       {routes}
+      <footer className='footer'></footer>
     </div>
   );
 }

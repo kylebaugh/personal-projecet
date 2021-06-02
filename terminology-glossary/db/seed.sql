@@ -4,10 +4,13 @@ DROP TABLE IF EXISTS users;
 
 CREATE TABLE users(
     user_id SERIAL PRIMARY KEY,
+    firstName VARCHAR(100),
+    lastName VARCHAR(100),
     email VARCHAR(100),
     password VARCHAR(10000),
     admin_key VARCHAR(10000),
-    is_admin BOOLEAN
+    is_admin BOOLEAN,
+    picture TEXT
 );
 
 CREATE TABLE unit(
