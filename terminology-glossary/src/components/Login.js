@@ -16,6 +16,8 @@ const Login = (props) =>{
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [registerEmail, setRegisterEmail] = useState('')
+    const [registerPassword, setRegisterPassword] = useState('')
     const [adminKey, setAdminKey] = useState('')
     const [isAdmin, setIsAdmin] = useState(true)
     
@@ -45,22 +47,27 @@ const Login = (props) =>{
     }
 
     return (
-        <div>
-            <h1>Login</h1>
-                <input name='email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email'></input>
-                <input name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password'></input>
-                <button onClick={handleLogin}>Login</button>
-
-            <h1>Register</h1>
-                <input name='firstName' value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder='First Name'></input>
-                <input name='lastName' value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder='Last Name'></input>
-                <input name='email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email'></input>
-                <input name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password'></input>
-                {!isAdmin && (
-                    <input value={adminKey} onChange={(e) => setAdminKey(e.target.value)} placeholder='Admin Key'></input>
-                )}
-                <input type="checkbox" checked={isAdmin === false} id="adminCheckbox" onChange={() => setIsAdmin(!isAdmin)} /> <span> Admin </span>
-                <button onClick={handleRegister}>Register</button>
+        <div className='loginPage'>
+            <div className='log'>
+                <h1 className='login'>Login!</h1>
+                    <input name='loginInput' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email'></input>
+                    <input name='loginInput' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password'></input>
+                    <button className='loginButton' onClick={handleLogin}>Login</button>
+            </div>
+            <div className='reg'>
+                <h1 className='register'>Sign Up!</h1>
+                    <input name='loginInput' value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder='First Name'></input>
+                    <input name='loginInput' value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder='Last Name'></input>
+                    <input name='loginInput' value={email} onChange={(e) => setRegisterEmail(e.target.value)} placeholder='Email'></input>
+                    <input name='loginInput' value={password} onChange={(e) => setRegisterPassword(e.target.value)} placeholder='Password'></input>
+                    {!isAdmin && <input value={adminKey} onChange={(e) => setAdminKey(e.target.value)} placeholder='Admin Key'></input>}
+                    <div className='adminCheckbox'>
+                        <input type="checkbox" checked={isAdmin === false} id="adminCheckbox" onChange={() => setIsAdmin(!isAdmin)} />
+                        <span>Admin Account?</span>
+                    </div>
+                    <button className='registerButton' onClick={handleRegister}>Register</button>
+                    <span className='registration'>A confirmation email will be sent upon registration</span>
+            </div>
         </div>
     )
 }

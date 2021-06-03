@@ -22,8 +22,8 @@ const Glossary = (props) => {
     }, [dispatch])
 
     return (
-        <div>
-            <h1>Glossary Header</h1>
+        <div className='glossaryPage'>
+            <h1>Units Header</h1>
             {units.map((unit) => {
                 return (
                     <div key={unit.unit_id}

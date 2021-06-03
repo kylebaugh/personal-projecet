@@ -1,20 +1,18 @@
 const bcrypt = require('bcryptjs')
 const nodemailer = require('nodemailer')
-//add adminKey to .env for security
+
+const {emailUser, emailPass, registerAdminKey} = process.env
 
 module.exports = {
     register: async (req, res) => {
         // let testAccount = await nodemailer.createTestAccount()
         let transporter = nodemailer.createTransport({
             service:'gmail',
-
-            // host: "smtp.ethereal.email",
-            // port: 587,
             secure: false,
 
             auth: {
-                user: 'kyle.devmountain@gmail.com',
-                pass: 'devmountain2021'
+                user: emailUser,
+                pass: emailPass
             }
         })
 
@@ -49,10 +47,10 @@ module.exports = {
             if(user){
                 return res.status(409).send('Email already taken')
             }
-            if (adminKey !== 'lastJediSucked' && adminKey !== ''){
+            if (adminKey !== registerAdminKey && adminKey !== ''){
                 return res.status(401).send('Admin Key Incorrect')
             }
-            if(adminKey === 'lastJediSucked'){
+            if(adminKey === registerAdminKey){
                 const salt = bcrypt.genSaltSync(10)
                 const hash = bcrypt.hashSync(password, salt)
                 const [admin] = await db.auth.register_admin

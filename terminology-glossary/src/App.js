@@ -17,6 +17,7 @@ function App() {
 
   return (
     <div className="App">
+      <section className='appHeader'></section>
       <Header />
       {routes}
       <footer className='footer'></footer>

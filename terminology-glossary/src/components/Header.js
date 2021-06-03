@@ -1,10 +1,13 @@
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+import {useState} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {useHistory} from 'react-router-dom'
 import {clearUser} from '../redux/authReducer'
 
 const Header = (props) => {
+    const [toggleMenu, setTogglemenu] = useState(false)
+
     let dispatch = useDispatch()
     const {user} = useSelector((store) => store.authReducer)
     const {push} = useHistory()
@@ -25,16 +28,20 @@ const Header = (props) => {
     return (
         <div>
 
-        <div style={{display:'flex', justifyContent:'space-between', backgroundColor:'white', paddingTop:'10px', paddingBottom:'10px'}}>
-            {/* <header className='header'>Logo</header> */}
-            <img className='header' src='https://mk0devmountainc07rxr.kinstacdn.com/wp-content/uploads/2020/10/devmountain-logo3.png' alt='DevMountainLogo'></img>
-            <header className='header'>
-                <div>
-                    {!user && <Link to='/' style={{paddingLeft:20}}>Home</Link>}
-                    {user && <Link to='/profile' style={{paddingLeft:20}}>Profile</Link>}
-                    <Link to='/glossary' style={{paddingLeft:20}}>Glossary</Link>
-                    {!user && <Link to='/login' style={{paddingLeft:20}}>Login</Link>}
-                    {user && <Link to ='/' onClick={logout} style={{paddingLeft:20}}>Logout</Link>}
+        <div className='headerHeader' 
+        // style={{display:'flex', justifyContent:'space-between', backgroundColor:'white', paddingLeft:'10px', paddingRight:'10px'}}
+        >
+            <img className='headerHeader' src='https://mk0devmountainc07rxr.kinstacdn.com/wp-content/uploads/2020/10/devmountain-logo3.png' alt='DevMountainLogo'></img>
+            <header className='headerHeader'>
+                <div className='headerMenu'>
+                    <div className='shownMenu'>
+                        {!user && toggleMenu && <Link to='/' className='headerMenuItem'>Home</Link>}
+                        {user && toggleMenu &&  <Link to='/profile' className='headerMenuItem'>Profile</Link>}
+                        {toggleMenu && <Link to='/glossary' className='headerMenuItem'>Units</Link>}
+                        {!user && toggleMenu && <Link to='/login' className='headerMenuItem'>Login</Link>}
+                        {user && toggleMenu && <Link to ='/' className='headerMenuItem' onClick={logout}>Logout</Link>}
+                    </div>
+                    <Link className='headerMenuItem' onClick={() => setTogglemenu(!toggleMenu)}>Menu</Link>
                 </div>
             </header>
             

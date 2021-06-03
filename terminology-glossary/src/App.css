@@ -1,11 +1,20 @@
 .App {
   text-align: center;
-  background-color: lightblue;
+  /* background-color: lightblue; */
+  background-image: url('https://devmountain.com/wp-content/uploads/2020/08/get-course.jpg');
+  /* url('https://devmountain.com/wp-content/uploads/2020/10/Home-Banner-Video.jpg'),  */
+  background-repeat: none;
+  background-size: cover;
+  height: 650px
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer{
+  height: 25px;
+}
+
+.appHeader{
+  height: 25px;
+  background-color: black;
 }
 
 .adminCheck {
@@ -18,13 +27,95 @@
   font-size: 0.75em;
 }
 
-.homeHeader{
-  padding-top: 50px;
-  padding-bottom: 50px;
+
+/* HOME PAGE */
+.homePage{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* background-color: yellow; */
+  height:400px;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+  margin-top: 40px;
 }
 
-.footer{
-  height: 25px;
+.homeWelcome{
+  font-size: 50px;
+  font-weight: bolder;
+  color:white
+}
+
+.homeOptions{
+  display:flex;
+  flex-direction: column;
+  align-self: center;
+  /* background-color: red; */
+  height: 150px;
+  justify-content: space-evenly;
+}
+
+.signUpButton{
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.homeRegisterButton{
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.ricky{
+  font-size: 25px;
+  font-weight: bolder;
+  color:white;
+}
+
+/* HEADER PAGE */
+
+.headerHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 25px ;
+  color: blue;
+  text-decoration: blue;
+}
+
+.headerMenu{
+  padding-right: 15px;
+  display: flex;
+}
+
+.headerMenuItem{
+  padding-left: 20px;
+  text-decoration:blue;
+}
+
+/* "GLOSSARY" PAGE */
+
+.glossaryPage{
+  background-image: url('https://devmountain.com/wp-content/uploads/2020/08/get-course.jpg');
+  background-repeat: none;
+  background-size: cover;
+  height:fit-content;
+  padding-bottom: 30px;
+}
+
+.glossaryPageName{
+  color:white
+}
+
+
+/* UNIT PAGE */
+.unitPage{
+  background-image: url('https://devmountain.com/wp-content/uploads/2020/08/get-course.jpg');
+  height:fit-content;
+  padding-bottom: 30px;
 }
 
 .unitBox{
@@ -42,6 +133,81 @@
   border-color: black;
 }
 
+.unitName{
+  display:flex;
+  font-size: 30px;
+  font-weight: bolder;
+  color: white;
+  margin-left: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.unitDefinition{
+  display:flex;
+  align-items: left;
+  color:white;
+  margin-left: 20px;
+}
+
+
+/* LOGIN PAGE */
+
+.loginPage{
+  display:flex;
+  flex-direction: column;
+  height: 500px;
+  justify-content: space-evenly;
+
+}
+
+.log{
+  display:flex;
+  flex-direction: column;
+  width: 150px;
+  align-self: center;
+  color:white
+}
+
+.reg{
+  display:flex;
+  flex-direction: column;
+  align-self: center;
+  width:150px
+}
+
+.adminCheckbox{
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.register{
+  color:white
+}
+
+.loginButton{
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.registerButton{
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.registration{
+  color:white;
+  width:200px;
+  align-self: center;
+  padding-top: 10px;
+}
+
+
+/* GLOSSARY ITEMS */
+
 .itemBox{
   display: flex;
   flex-direction: column;
@@ -56,41 +222,3 @@
   border-style: solid;
   border-color: black;
 }
-
-.unitName{
-  display:flex;
-  /* margin-left: 10px; */
-  margin-top: 10px;
-}
-
-.unitDefinition{
-  display:flex;
-  align-items: left;
-}
-
-.header{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: lightcyan;
-  padding: 15px;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  font-size: 25px ;
-  color: blue;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-

@@ -38,8 +38,8 @@ const Unit = (props) => {
     }
 
     return (
-        <div>
-            <h1>Unit {props.match.params.unit_id}</h1>
+        <div className='unitPage'>
+            <h1 className='glossaryPageName'>Unit {props.match.params.unit_id}</h1>
             {user && <button onClick={handleAdd}>Add Item</button>}
             {addItemBox && 
                 <div>
