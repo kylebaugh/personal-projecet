@@ -12,10 +12,8 @@ const Unit = (props) => {
     const [newItemName, setNewItemName] = useState('')
     const [newItemDefinition, setNewItemDefinition] = useState('')
     const [addItemBox, setAddItemBox] = useState(false)
-    // const [editBox, setEditBox] = useState(false)
     
     useEffect(() => {
-        // console.log(props)
         axios.get(`/glossary/${props.match.params.unit_id}`)
             .then((res) => {
                 dispatch(getUnit(res.data))

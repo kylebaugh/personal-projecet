@@ -31,3 +31,9 @@ CREATE TABLE glossary_unit(
     glossary_id INT REFERENCES glossary(glossary_id),
     unit_id INT REFERENCES unit(unit_id)
 );
+
+CREATE TABLE topics(
+    topic_id SERIAL PRIMARY KEY,
+    unit_id INT REFERENCES unit(unit_id),
+    topic_name VARCHAR(100)
+);

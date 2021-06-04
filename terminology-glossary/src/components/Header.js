@@ -20,7 +20,7 @@ const Header = (props) => {
             })
             .catch((err) => {
                 console.log('Logout Endpoint Failed')
-                console.log(user)
+                console.log(err)
             })
     }
 
@@ -28,10 +28,8 @@ const Header = (props) => {
     return (
         <div>
 
-        <div className='headerHeader' 
-        // style={{display:'flex', justifyContent:'space-between', backgroundColor:'white', paddingLeft:'10px', paddingRight:'10px'}}
-        >
-            <img className='headerHeader' src='https://mk0devmountainc07rxr.kinstacdn.com/wp-content/uploads/2020/10/devmountain-logo3.png' alt='DevMountainLogo'></img>
+        <div className='headerHeader'>
+                <img href='http://localhost:3000/#/' className='headerIcon' src='https://mk0devmountainc07rxr.kinstacdn.com/wp-content/uploads/2020/10/devmountain-logo3.png' alt='DevMountainLogo'></img>
             <header className='headerHeader'>
                 <div className='headerMenu'>
                     <div className='shownMenu'>
@@ -41,7 +39,7 @@ const Header = (props) => {
                         {!user && toggleMenu && <Link to='/login' className='headerMenuItem'>Login</Link>}
                         {user && toggleMenu && <Link to ='/' className='headerMenuItem' onClick={logout}>Logout</Link>}
                     </div>
-                    <Link className='headerMenuItem' onClick={() => setTogglemenu(!toggleMenu)}>Menu</Link>
+                    <span className='headerMenuItem' style={{cursor:'pointer'}} onClick={() => setTogglemenu(!toggleMenu)}>Menu</span>
                 </div>
             </header>
             

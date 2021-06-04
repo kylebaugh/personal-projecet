@@ -58,8 +58,8 @@ const Login = (props) =>{
                 <h1 className='register'>Sign Up!</h1>
                     <input name='loginInput' value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder='First Name'></input>
                     <input name='loginInput' value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder='Last Name'></input>
-                    <input name='loginInput' value={email} onChange={(e) => setRegisterEmail(e.target.value)} placeholder='Email'></input>
-                    <input name='loginInput' value={password} onChange={(e) => setRegisterPassword(e.target.value)} placeholder='Password'></input>
+                    <input name='loginInput' value={registerEmail} onChange={(e) => setRegisterEmail(e.target.value)} placeholder='Email'></input>
+                    <input name='loginInput' value={registerPassword} onChange={(e) => setRegisterPassword(e.target.value)} placeholder='Password'></input>
                     {!isAdmin && <input value={adminKey} onChange={(e) => setAdminKey(e.target.value)} placeholder='Admin Key'></input>}
                     <div className='adminCheckbox'>
                         <input type="checkbox" checked={isAdmin === false} id="adminCheckbox" onChange={() => setIsAdmin(!isAdmin)} />

@@ -3,33 +3,17 @@ require('dotenv').config()
 const express = require('express')
 const massive = require('massive')
 const session = require('express-session')
-// const bodyParser = require('body-parser')
-// const exphbs = require('express-handlebars')
-// const path = require('path')
-// const nodemailer = require('nodemailer')
-
 
 const {CONNECTION_STRING, SERVER_PORT, SESSION_SECRET} = process.env
 
+//CONTROLLERS
 const authCtrl = require('./controllers/authController')
 const glossaryCtrl = require('./controllers/glossaryController')
 const unitCtrl = require('./controllers/unitController')
 
-//CONTROLLERS
 
 //APP INSTANCE CREATED
 const app = express()
-
-// //View Engine setup
-// app.engine('handlebars', exphbs())
-// app.set('view engine', 'handlebars')
-
-// //Body Parser Middleware
-// app.use(bodyParser.urlencoded({extended: false}))
-// app.use(bodyParser.json())
-
-// //Static folder
-// app.use('/public', express.static(path.join(__dirname, 'public')))
 
 
 //TOP LEVEL MIDDLEWARE
@@ -66,6 +50,8 @@ app.get('/auth/logout', authCtrl.logout)
 
 app.get('/glossary/getAllUnits', glossaryCtrl.getAllUnits)
 app.get('/glossary/:unit_id', glossaryCtrl.getUnit)
+app.get('/topics/:unit_id', glossaryCtrl.getTopic)
+app.get('/topics/topicUnit', glossaryCtrl.topicUnit)
 
 //Unit
 

@@ -46,7 +46,14 @@ VALUES
 (37, 'Functions', 'Functions are reusable pieces of code that we can use to execute code blocks whenever they are invoked. Functions can be written using either a function declaration or an expression. Functions are invoked by referencing the function name and pairing it with a pair of parentheses "()". Think of these parentheses as the button you are pushing to invoke the function. Functions can be set up to receive parameters, or values that will change depending on when the function is invoked. For example, to write a simple function that will add two numbers together we can do the following: function addTwo(num1,num2){return num1+num2). If we wanted to use the function, we would Invoke the function and pass in the variables we want to use in the function. If we wanted to add 2 and 3, we would run addTwo(2,3). 2 and 3 take the place of "num1" and "num2" in our function, so the function knows what data to add together.' , 1),
 (37, 'Declaration Function', 'A Declaration Function uses this format: let nameOfFunction() {//Code to execute}', 1),
 (37, 'Expression Function', 'An Expression Function uses this format: let nameOfFunction = function(){//Code to execute}', 1),
-(37, 'Scope', 'Scope is an incredibly important topic in Javascript because it determines what has access to the variables we delcare. The rule of thumb is that code blocks are able to look up in scope but not down. Check this article for more info: https://www.w3schools.com/js/js_scope.asp', 1),
+(37, 'Scope', 'Scope is an incredibly important topic in Javascript because it determines what has access to the variables we delcare. The rule of thumb is that code blocks are able to look up in scope but not down. Check this article for more info: https://www.w3schools.com/js/js_scope.asp', 1)
+;
 
 
+-- TOPICS --
+INSERT INTO topics
+(unit_id, topic_name)
+VALUES
+(1, 'GitHub'), (1, 'HTML'), (1, 'CSS'), (1, 'Intro to JavaScript'), (1, 'Data Types'), (1, 'If Statements'), (1, 'Intro to Functions'), (1, 'Scope'),
+(2, 'Objects'), (2, 'Array Methods'), (2, 'Arrow Functions'), (2, 'Callback Functions'), (2, 'Spread Operator'), (2, 'NESTING')
 ;
