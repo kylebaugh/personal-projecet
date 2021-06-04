@@ -8,6 +8,7 @@ import Topics from './Topics'
 const Glossary = (props) => {
     const dispatch = useDispatch()
     const {units} = useSelector((state) => state.glossaryReducer)
+
     // const {user} = useSelector((state) => state.authReducer)
 
     useEffect(() => {
@@ -24,7 +25,7 @@ const Glossary = (props) => {
 
     return (
         <div className='glossaryPage'>
-            <h1>Units Header</h1>
+            <h1 style={{color:'white'}}>Unit Breakdown</h1>
             {units.map((unit) => {
                 return (
                         <section className='unitBox'

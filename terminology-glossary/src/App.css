@@ -95,8 +95,6 @@
   padding-right: 10px;
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-size: 25px ;
-  color: blue;
-  text-decoration: blue;
   cursor:pointer;
 }
 
@@ -106,9 +104,34 @@
 }
 
 .headerMenuItem{
-  padding-left: 20px;
+  /* padding-left: 20px; */
+  margin-right: 20px;
   text-decoration:blue;
 }
+
+.mobileHeader{
+  display: none
+}
+
+/* .mobileMenu{
+  padding-right: 15px;
+  gap:20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 25px ;
+  color: blue;
+  text-decoration: blue;
+}
+
+.mobileMenuItem{
+  text-decoration:blue;
+} */
+
 
 /* "GLOSSARY" PAGE */
 
@@ -152,7 +175,7 @@
   font-weight: bolder;
   color: white;
   margin-left: 10px;
-  margin-top: 10px;
+  margin-top: 15px;
   text-decoration: none;
 }
 
@@ -160,7 +183,8 @@
   display:flex;
   align-items: left;
   color:white;
-  margin-left: 20px;
+  margin-left: 10px;
+  padding-right: 10px;
 }
 
 
@@ -236,16 +260,62 @@
   border-color: black;
 }
 
+.toggleEditItem{
+  padding-left: 10px;
+  padding-bottom: 15px;
+}
+
+.addSection{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 22px;
+  padding-bottom: 10px;
+}
+
+.addItemBox{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.addSubmitButton{
+  width:fit-content;
+  align-self: center;
+}
+
+.addName{
+  width:425px;
+}
+
+.addDefinition{
+  width:425px;
+  height:200px;
+  margin-bottom: 10px;
+}
+
+.editItemBox{
+  display:flex;
+  flex-direction: column;
+}
+
+.newName{
+  width:375px;
+}
+
+.newDefinition{
+  width:375px;
+  height:200px;
+}
+
 /* TOPICS PAGE */
 
 .topicList{
   display: flex;
   color:white;
-  /* flex-direction: column; */
-  /* align-self: flex-start; */
-  /* justify-content: left; */
   margin-left: 50px;
   margin-top: 10px;
   margin-bottom: 10px;
-  /* background-color: green; */
 }

@@ -1,0 +1,110 @@
+@media (max-width: 500px){
+
+
+    /* Home Page */
+    .homeWelcome{
+        color:white
+    }
+
+
+
+    /* HEADER PAGE */
+    .headerHeader{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 25px ;
+        color: blue;
+        text-decoration: blue;
+      }
+      
+      .headerIcon{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 25px ;
+        cursor:pointer;
+      }
+      
+      .showMenu{
+        padding-right: 15px;
+        display: none;
+      }
+      
+      .headerMenuItem{
+        display:none;
+        padding-left: 20px;
+        text-decoration:blue;
+      }
+      
+      .headerMenuIcon{
+        padding-left: 20px;
+        text-decoration:blue;
+      }
+
+      .headerMenuIcon:hover{
+        color:black;
+      }
+      
+      .mobileHeader{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-right: 25px;
+      }
+      
+      .headerIcon{
+        width:200px;
+        height: auto;
+      }
+
+      .mobileMenu{
+        padding-right: 15px;
+        padding-bottom: 5px;
+        gap:20px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 25px ;
+        color: blue;
+        text-decoration: blue;
+      }
+      
+      .mobileMenuItem{
+        text-decoration:blue;
+        cursor:pointer;
+      }
+
+      .mobileMenuItem:hover{
+          color:black
+      }
+
+
+    /* GLOSSARY PAGE*/
+      .unitBox{
+          width:425px;
+      }
+
+    /* UNIT PAGE */
+      .itemBox{
+          width:425px;
+      }
+
+
+
+
+
+
+}

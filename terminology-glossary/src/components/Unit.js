@@ -38,14 +38,17 @@ const Unit = (props) => {
     return (
         <div className='unitPage'>
             <h1 className='glossaryPageName'>Unit {props.match.params.unit_id}</h1>
-            {user && <button onClick={handleAdd}>Add Item</button>}
-            {addItemBox && 
-                <div>
-                    <input value={newItemName} onChange={(e) => setNewItemName(e.target.value)} placeholder='Name'/>
-                    <input value={newItemDefinition} onChange={(e) => setNewItemDefinition(e.target.value)} placeholder='Description'/>
-                    <button 
+            <div className='addSection'>
+                {user && <button onClick={handleAdd}>Add Item</button>}
+                {addItemBox && <button className='addSubmitButton'
                     onClick={addItem}
-                    >Submit</button>
+                    >Submit</button>}
+            </div>
+            {addItemBox && 
+                <div className='addItemBox'>
+                    <input className='addName' value={newItemName} onChange={(e) => setNewItemName(e.target.value)} placeholder='Name'/>
+                    <input className='addDefinition' value={newItemDefinition} onChange={(e) => setNewItemDefinition(e.target.value)} placeholder='Description'/>
+                    
                 </div>}
             {unit.map((item) => {
                 let id = item.glossary_id

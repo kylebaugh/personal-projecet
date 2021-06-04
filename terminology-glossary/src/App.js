@@ -1,4 +1,5 @@
 import './App.css';
+import './phoneScreen.css'
 import Header from "./components/Header"
 import routes from "./routes"
 import {setUser} from './redux/authReducer'

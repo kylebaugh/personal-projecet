@@ -63,7 +63,7 @@ const Login = (props) =>{
                     {!isAdmin && <input value={adminKey} onChange={(e) => setAdminKey(e.target.value)} placeholder='Admin Key'></input>}
                     <div className='adminCheckbox'>
                         <input type="checkbox" checked={isAdmin === false} id="adminCheckbox" onChange={() => setIsAdmin(!isAdmin)} />
-                        <span>Admin Account?</span>
+                        <span style={{color:'white'}}>Admin Account?</span>
                     </div>
                     <button className='registerButton' onClick={handleRegister}>Register</button>
                     <span className='registration'>A confirmation email will be sent upon registration</span>

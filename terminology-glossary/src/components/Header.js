@@ -24,27 +24,55 @@ const Header = (props) => {
             })
     }
 
+    const toHome = () => {
+        push('/')
+        setTogglemenu(false)
+    }
+
+    const toProfile = () => {
+        push('/profile')
+        setTogglemenu(!toggleMenu)
+    }
+
+    const toGlossary = () => {
+        push('/glossary')
+        setTogglemenu(!toggleMenu)
+    }
+
+    const toLogin = () => {
+        push('/login')
+        setTogglemenu(!toggleMenu)
+    }
 
     return (
         <div>
 
         <div className='headerHeader'>
-                <img href='http://localhost:3000/#/' className='headerIcon' src='https://mk0devmountainc07rxr.kinstacdn.com/wp-content/uploads/2020/10/devmountain-logo3.png' alt='DevMountainLogo'></img>
+                <img className='headerIcon' onClick={() => {toHome()}} src='https://mk0devmountainc07rxr.kinstacdn.com/wp-content/uploads/2020/10/devmountain-logo3.png' alt='DevMountainLogo'></img>
             <header className='headerHeader'>
                 <div className='headerMenu'>
                     <div className='shownMenu'>
-                        {!user && toggleMenu && <Link to='/' className='headerMenuItem'>Home</Link>}
-                        {user && toggleMenu &&  <Link to='/profile' className='headerMenuItem'>Profile</Link>}
-                        {toggleMenu && <Link to='/glossary' className='headerMenuItem'>Units</Link>}
-                        {!user && toggleMenu && <Link to='/login' className='headerMenuItem'>Login</Link>}
-                        {user && toggleMenu && <Link to ='/' className='headerMenuItem' onClick={logout}>Logout</Link>}
+                        {!user && toggleMenu && <span className='headerMenuItem' onClick={() => {toHome()}}>Home</span>}
+                        {user && toggleMenu &&  <span className='headerMenuItem' onClick={() => {toProfile()}}>Profile</span>}
+                        {toggleMenu && <span className='headerMenuItem' onClick={() => {toGlossary()}} >Units</span>}
+                        {!user && toggleMenu && <span className='headerMenuItem' onClick={() => {toLogin()}} >Login</span>}
+                        {user && toggleMenu && <span className='headerMenuItem' onClick={() => {logout()}}>Logout</span>}
                     </div>
-                    <span className='headerMenuItem' style={{cursor:'pointer'}} onClick={() => setTogglemenu(!toggleMenu)}>Menu</span>
+                    <span className='headerMenuIcon' style={{cursor:'pointer'}} onClick={() => setTogglemenu(!toggleMenu)}>Menu</span>
                 </div>
+
             </header>
             
         </div>
-
+            <header className='mobileHeader'>
+            {toggleMenu && <div className='mobileMenu'>
+                {!user && toggleMenu && <span className='mobileMenuItem' onClick={() => {toHome()}}>Home</span>}
+                {user && toggleMenu &&  <span className='mobileMenuItem' onClick={() => {toProfile()}}>Profile</span>}
+                {toggleMenu && <span className='mobileMenuItem' onClick={() => {toGlossary()}}>Units</span>}
+                {!user && toggleMenu && <span className='mobileMenuItem' onClick={() => {toLogin()}}>Login</span>}
+                {user && toggleMenu && <span className='mobileMenuItem' onClick={logout}>Logout</span>}
+            </div>}
+            </header>
         </div>
     )
 }

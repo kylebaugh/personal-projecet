@@ -41,21 +41,23 @@ const Item = (props) => {
     return(
         <div className='itemBox'>
                         <div>
-                            <div className='unitName'>Title: {item.name}</div>
+                            <div className='unitName'>{item.name}</div>
                             <br></br>
-                            <div className='unitDefinition'>Definition: {item.definition}</div>
+                            <div className='unitDefinition'>Definition:{<br></br>}{<br></br>} {item.definition}</div>
                             <br></br>
                         </div>
-                        {user && <div>
+                        {user && <div className='toggleEditItem'>
                             <button onClick={() => {toggleEdit(item.glossary_id)}}>Edit</button>
                             <button 
                                 onClick={() => deleteItem(item.glossary_id)}
                                 >Delete</button>
-                                {editBox && <div>
-                                    <input placeholder="New Name" value={newItemName} onChange={(e) => setNewItemName(e.target.value)}></input>
-                                    <input placeholder="New Definition" value={newItemDefinition} onChange={(e) => setNewItemDefinition(e.target.value)}></input>
-                                    <button onClick={toggleEdit}>Cancel</button>
-                                    <button onClick={() => editItem(item.glossary_id)}>Submit</button>
+                                {editBox && <div className='editItemBox'>
+                                    <input className='newName' placeholder="New Name" value={newItemName} onChange={(e) => setNewItemName(e.target.value)}></input>
+                                    <input type='text' className='newDefinition' placeholder="New Definition" value={newItemDefinition} onChange={(e) => setNewItemDefinition(e.target.value)}></input>
+                                    <section style={{display:'flex', flexDirection:'row'}}>
+                                        <button onClick={toggleEdit}>Cancel</button>
+                                        <button onClick={() => editItem(item.glossary_id)}>Submit</button>
+                                    </section>
                                     </div>}
                         </div>}
                     </div>
