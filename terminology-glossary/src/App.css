@@ -1,47 +1,55 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
   /* background-color: lightblue; */
   background-image: url('https://devmountain.com/wp-content/uploads/2020/08/get-course.jpg');
   /* url('https://devmountain.com/wp-content/uploads/2020/10/Home-Banner-Video.jpg'),  */
   background-repeat: none;
   background-size: cover;
-  height: 650px
+  min-height: 100vh
 }
 
-.footer{
-  height: 25px;
+button:hover{
+  background: lightcyan;
 }
 
 .appHeader{
-  height: 25px;
+  height: 3vh;
   background-color: black;
 }
 
-.adminCheck {
-  color: whitesmoke;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  margin: -3px 0px 0px 20px;
-  font-size: 0.75em;
+.appFooter{
+  background-color: black;
+  height: 3vh;
 }
 
 
 /* HOME PAGE */
+
+.border{
+  display: flex;
+}
+
+
+.homeBorder{
+  width:10vw;
+  min-height: 80vh;
+  background-color: rgb(232, 232, 232);
+}
+
 .homePage{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* background-color: yellow; */
-  height:400px;
-  /* padding-top: 50px;
-  padding-bottom: 50px; */
-  margin-top: 40px;
+  width:80vw;
+  height:79vh;
 }
 
 .homeWelcome{
   font-size: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-weight: bolder;
   color:white
 }
@@ -71,13 +79,18 @@
   color:white;
 }
 
+.rickyPage{
+  height:79vh;
+}
+
 /* HEADER PAGE */
 
 .headerHeader{
   display: flex;
+  height: 15vh;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: lightcyan;
   padding-left: 10px;
   padding-right: 10px;
   font-family:Georgia, 'Times New Roman', Times, serif;
@@ -90,7 +103,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: lightcyan;
   padding-left: 10px;
   padding-right: 10px;
   font-family:Georgia, 'Times New Roman', Times, serif;
@@ -103,10 +116,18 @@
   display: flex;
 }
 
+.headerMenuIcon{
+  display:none
+}
+
 .headerMenuItem{
-  /* padding-left: 20px; */
   margin-right: 20px;
   text-decoration:blue;
+}
+
+.headerMenuItem:hover{
+  color:black;
+  cursor:pointer
 }
 
 .mobileHeader{
@@ -139,12 +160,17 @@
   background-image: url('https://devmountain.com/wp-content/uploads/2020/08/get-course.jpg');
   background-repeat: none;
   background-size: cover;
-  height:fit-content;
+  min-height:80vh;
+  width:80vw;
   padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .glossaryPageName{
-  color:white
+  color:white;
+
 }
 
 
@@ -153,20 +179,37 @@
   background-image: url('https://devmountain.com/wp-content/uploads/2020/08/get-course.jpg');
   height:fit-content;
   padding-bottom: 30px;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: green; */
 }
 
 .unitBox{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  height: fit-content;
-  width: 800px;
-  margin-left: 25px;
-  margin-right: 25px;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
+  width: 70vw;
   margin-bottom: 25px;
+  padding-left: 2vw;
+  padding-right: 2vw;
   padding-bottom: 10px;
   border-style: solid;
   border-color: black;
+  /* background-color: green; */
+}
+
+.unitLink{
+  text-decoration: none;
+}
+
+.unitName:hover{
+  cursor:pointer;
+  color:black;
 }
 
 .unitName{
@@ -192,9 +235,11 @@
 
 .loginPage{
   display:flex;
-  flex-direction: column;
-  height: 500px;
+  flex-direction: row;
+  width: 80vw;
+  height: 79vh;
   justify-content: space-evenly;
+  /* align-content: flex-start; */
 
 }
 
@@ -202,15 +247,31 @@
   display:flex;
   flex-direction: column;
   width: 150px;
+  height: 25vh;
+  color:white;
+  /* background-color: green; */
+  align-self: flex-start;
+  margin-top: 20vh;
+
+}
+
+.loginDivider{
+  width:.5px;
+  height:65vh;
+  border-style: solid;
+  border-color: black;
   align-self: center;
-  color:white
+  background-color: black;
 }
 
 .reg{
   display:flex;
   flex-direction: column;
-  align-self: center;
-  width:150px
+  align-self: flex-start;
+  width:150px;
+  /* background-color: green; */
+  margin-top: 20vh;
+
 }
 
 .adminCheckbox{
@@ -251,7 +312,7 @@
   align-items: flex-start;
   text-align: left;
   height: fit-content;
-  width: 800px;
+  width: 70vw;
   margin-left: 25px;
   margin-right: 25px;
   margin-bottom: 25px;
@@ -267,9 +328,10 @@
 
 .addSection{
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  padding-left: 30px;
-  padding-right: 22px;
+  align-content: left;
+  width:45vw;
   padding-bottom: 10px;
 }
 
@@ -277,23 +339,41 @@
   display:flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 30px;
-  padding-right: 30px;
+}
+
+.addAddButton{
+  width: 100px;
+  align-self: center;
+  margin-bottom: 10px;
 }
 
 .addSubmitButton{
-  width:fit-content;
+  width:100px;
   align-self: center;
 }
 
 .addName{
-  width:425px;
+  width:44.2vw;
 }
 
 .addDefinition{
-  width:425px;
+  width:44.2vw;
   height:200px;
   margin-bottom: 10px;
+}
+
+.itemName{
+  display:flex;
+  font-size: 30px;
+  font-weight: bolder;
+  color: white;
+  margin-left: 10px;
+  margin-top: 15px;
+  text-decoration: none;
+}
+
+.addToListButton{
+  margin-left: 10px;
 }
 
 .editItemBox{
@@ -312,10 +392,79 @@
 
 /* TOPICS PAGE */
 
+.topicSection{
+  max-height: 150px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+
+}
+
 .topicList{
   display: flex;
+  width:20vw;
   color:white;
   margin-left: 50px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+
+/* PROFILE PAGE */
+
+.profilePage{
+  min-height:79vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  color:white
+}
+
+.profilePagePic{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.profileDetails{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20vw;
+  min-height: 17.7vw;
+  color: white;
+  border-style: solid;
+  border-color: black;
+}
+
+.termTop{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.printButton{
+  width: fit-content;
+  align-self: center;
+  margin-bottom: 1vh;
+}
+
+.myTerms{
+  width:50vw;
+  min-height: 50vh;
+  border-style: solid;
+  border-color: black;
+  /* background-color: green; */
+  margin-bottom: 2.5vh;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+}
+.termSpace{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  padding-bottom: 1vw;
 }

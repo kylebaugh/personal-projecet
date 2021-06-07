@@ -38,29 +38,46 @@ const Item = (props) => {
         .catch(err => console.log('Edit Item Failed'))
     }
 
+    const addToList = (glossary_id) => {
+        axios.post(`/topics/learnList/${glossary_id}`)
+            .then((res) => {
+                console.log(res.data)
+            })
+            .catch(err => {
+                console.log(err)
+                console.log('Add To List Failed')
+            })
+    }
+
     return(
         <div className='itemBox'>
-                        <div>
-                            <div className='unitName'>{item.name}</div>
-                            <br></br>
-                            <div className='unitDefinition'>Definition:{<br></br>}{<br></br>} {item.definition}</div>
-                            <br></br>
-                        </div>
-                        {user && <div className='toggleEditItem'>
-                            <button onClick={() => {toggleEdit(item.glossary_id)}}>Edit</button>
-                            <button 
-                                onClick={() => deleteItem(item.glossary_id)}
-                                >Delete</button>
-                                {editBox && <div className='editItemBox'>
-                                    <input className='newName' placeholder="New Name" value={newItemName} onChange={(e) => setNewItemName(e.target.value)}></input>
-                                    <input type='text' className='newDefinition' placeholder="New Definition" value={newItemDefinition} onChange={(e) => setNewItemDefinition(e.target.value)}></input>
-                                    <section style={{display:'flex', flexDirection:'row'}}>
-                                        <button onClick={toggleEdit}>Cancel</button>
-                                        <button onClick={() => editItem(item.glossary_id)}>Submit</button>
-                                    </section>
-                                    </div>}
+            <div>
+                <div className='itemName'>{item.name}</div>
+                <br></br>
+                <div className='unitDefinition'>Definition:{<br></br>}{<br></br>} {item.definition}</div>
+                <br></br>
+                {!user.is_admin && <div className='addToListButton'>
+                    <button
+                        onClick={() => {addToList(item.glossary_id)}}
+                    >Add to My List</button>
+                    </div>}
+                <br></br>
+            </div>
+            {user.is_admin && <div className='toggleEditItem'>
+                <button onClick={() => {toggleEdit(item.glossary_id)}}>Edit</button>
+                <button 
+                    onClick={() => deleteItem(item.glossary_id)}
+                    >Delete</button>
+                    {editBox && <div className='editItemBox'>
+                        <input className='newName' placeholder="New Name" value={newItemName} onChange={(e) => setNewItemName(e.target.value)}></input>
+                        <input type='text' className='newDefinition' placeholder="New Definition" value={newItemDefinition} onChange={(e) => setNewItemDefinition(e.target.value)}></input>
+                        <section style={{display:'flex', flexDirection:'row'}}>
+                            <button onClick={toggleEdit}>Cancel</button>
+                            <button onClick={() => editItem(item.glossary_id)}>Submit</button>
+                        </section>
                         </div>}
-                    </div>
+            </div>}
+        </div>
     )
 
 }

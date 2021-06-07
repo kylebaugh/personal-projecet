@@ -1,4 +1,4 @@
-@media (max-width: 500px){
+@media (max-width: 650px){
 
 
     /* Home Page */
@@ -62,7 +62,7 @@
       }
       
       .headerIcon{
-        width:200px;
+        width:300px;
         height: auto;
       }
 
@@ -81,7 +81,10 @@
         color: blue;
         text-decoration: blue;
       }
-      
+
+      .headerMenuIcon{
+        display:flex
+      }
       .mobileMenuItem{
         text-decoration:blue;
         cursor:pointer;

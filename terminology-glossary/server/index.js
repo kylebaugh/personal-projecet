@@ -52,6 +52,10 @@ app.get('/glossary/getAllUnits', glossaryCtrl.getAllUnits)
 app.get('/glossary/:unit_id', glossaryCtrl.getUnit)
 app.get('/topics/:unit_id', glossaryCtrl.getTopic)
 app.get('/topics/topicUnit', glossaryCtrl.topicUnit)
+app.get('/topics/userItems/:user_id', glossaryCtrl.userItems)
+app.get('/topics/learnList/:user_id', glossaryCtrl.learnList)
+app.post('/topics/learnList/:glossary_id', glossaryCtrl.addPrint)
+app.delete('/topics/learnList/:glossary_id', glossaryCtrl.removePrint)
 
 //Unit
 

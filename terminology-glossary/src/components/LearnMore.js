@@ -1,6 +1,6 @@
 const LearnMore = () => {
     return(
-        <div>
+        <div className='rickyPage'>
             <br></br>
             <br></br>
             <br></br>

@@ -10,7 +10,7 @@ const Topics = (props) => {
     useEffect(() => {
         axios.get(`/topics/${unit_id}`)
             .then((res) => {
-                console.log(res.data)
+                // console.log(res.data)
                 setUnitName(res.data)
             })
             .catch((err) => {
@@ -20,17 +20,16 @@ const Topics = (props) => {
 
 
     return(
-        <div>
+        <div className='topicSection'>
                 {unitName.map((val) => {
                     return (
-                        <div
-                        className='topicList'
-                        key={val.topic_id}
-                        >
-                        <li>
-                            {val.topic_name}
-                        </li>
-                    </div>
+                            <div
+                                className='topicList'
+                                key={val.topic_id}>
+                                <li>
+                                    {val.topic_name}
+                                </li>
+                            </div>
                     )
                 })}
         </div>

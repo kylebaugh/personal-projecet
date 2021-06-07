@@ -9,8 +9,6 @@ const Glossary = (props) => {
     const dispatch = useDispatch()
     const {units} = useSelector((state) => state.glossaryReducer)
 
-    // const {user} = useSelector((state) => state.authReducer)
-
     useEffect(() => {
         axios.get('/glossary/getAllUnits')
             .then((res) => {
@@ -24,24 +22,29 @@ const Glossary = (props) => {
     }, [dispatch])
 
     return (
-        <div className='glossaryPage'>
-            <h1 style={{color:'white'}}>Unit Breakdown</h1>
-            {units.map((unit) => {
-                return (
-                        <section className='unitBox'
-                        key={unit.unit_id}
-                        id={unit.unit_id}
-                        >
-                            <Link to={`/unit/${unit.unit_id}`}>
-                                <section className='unitName'>
-                                    {unit.name}
-                                </section>
-                            </Link>
-                            <Topics 
-                            unit_id = {unit.unit_id}/>
-                        </section>
-                )
-            })}
+         <div className='border'>
+            <div className='homeBorder'></div>
+            <div className='glossaryPage'>
+                <h1 style={{color:'white'}}>Unit Breakdown</h1>
+                {units.map((unit) => {
+                    return (
+                            <div className='unitBox'
+                            key={unit.unit_id}
+                            id={unit.unit_id}
+                            >
+                                <Link to={`/unit/${unit.unit_id}`} className='unitLink'>
+                                    <section className='unitName'>
+                                        {unit.name} Topics
+                                    </section>
+                                    <br></br>
+                                </Link>
+                                    <Topics 
+                                    unit_id = {unit.unit_id}/>
+                            </div>
+                    )
+                })}
+            </div>
+            <div className='homeBorder'></div>
         </div>
     )
 }

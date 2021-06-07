@@ -21,7 +21,7 @@ function App() {
       <section className='appHeader'></section>
       <Header />
       {routes}
-      <footer className='footer'></footer>
+      <section className='appFooter'></section>
     </div>
   );
 }

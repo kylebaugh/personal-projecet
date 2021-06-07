@@ -36,31 +36,35 @@ const Unit = (props) => {
     }
 
     return (
-        <div className='unitPage'>
-            <h1 className='glossaryPageName'>Unit {props.match.params.unit_id}</h1>
-            <div className='addSection'>
-                {user && <button onClick={handleAdd}>Add Item</button>}
-                {addItemBox && <button className='addSubmitButton'
-                    onClick={addItem}
-                    >Submit</button>}
+        <div className='border'>
+            <div className='homeBorder'></div>
+            <div className='unitPage'>
+                <h1 className='glossaryPageName'>Unit {props.match.params.unit_id}</h1>
+                <div className='addSection'>
+                    {user.is_admin && <button className='addAddButton' onClick={handleAdd}>Add Item</button>}
+                    {addItemBox && <button className='addSubmitButton'
+                        onClick={addItem}
+                        >Submit</button>}
+                </div>
+                {addItemBox && 
+                    <div className='addItemBox'>
+                        <input className='addName' value={newItemName} onChange={(e) => setNewItemName(e.target.value)} placeholder='Name'/>
+                        <input className='addDefinition' value={newItemDefinition} onChange={(e) => setNewItemDefinition(e.target.value)} placeholder='Description'/>
+                        
+                    </div>}
+                {unit.map((item) => {
+                    let id = item.glossary_id
+                    return (
+                        <Item 
+                        key={id}
+                        unitId = {props.match.params.unit_id}
+                        item = {item}
+                        />
+                        )
+                    })
+                }
             </div>
-            {addItemBox && 
-                <div className='addItemBox'>
-                    <input className='addName' value={newItemName} onChange={(e) => setNewItemName(e.target.value)} placeholder='Name'/>
-                    <input className='addDefinition' value={newItemDefinition} onChange={(e) => setNewItemDefinition(e.target.value)} placeholder='Description'/>
-                    
-                </div>}
-            {unit.map((item) => {
-                let id = item.glossary_id
-                return (
-                    <Item 
-                    key={id}
-                    unitId = {props.match.params.unit_id}
-                    item = {item}
-                    />
-                    )
-                })
-            }
+            <div className='homeBorder'></div>
         </div>
     )
 }

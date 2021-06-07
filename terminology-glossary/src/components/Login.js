@@ -30,44 +30,67 @@ const Login = (props) =>{
             .then((res) => {
                 dispatch(setUser(res.data))
                 localStorage.setItem('user_id', JSON.stringify(res.data))
+                console.log(res.data)
+                if(res.data === 409){
+                    alert('Email not found')
+                }
                 push('/profile')
             })
-            .catch((err) => console.log(err))
+            .catch((err) => {
+                if(err+''.includes('409')){
+                    alert('Email not found')
+                }
+                if(err+''.includes('401')){
+                    alert('Password incorrect')
+                }
+                console.log(err)})
     }
 
     const handleRegister = () => {
-        axios.post('/auth/register', {firstName, lastName, email, password, adminKey, isAdmin})
+        axios.post('/auth/register', {firstName, lastName, registerEmail, registerPassword, adminKey, isAdmin})
         .then((res) => {
-            // console.log(res.data)
             dispatch(setUser(res.data))
             localStorage.setItem('user_id', JSON.stringify(res.data))
             push('/profile')
             })
-            .catch((err) => console.log(err))
+            .catch((err) => {
+                if(err+''.includes('409')){
+                    alert('Email already taken')
+                }
+                if(err+''.includes('401')){
+                    alert('Admin Key Incorrect')
+                }
+                console.log(err)})
     }
 
     return (
-        <div className='loginPage'>
-            <div className='log'>
-                <h1 className='login'>Login!</h1>
-                    <input name='loginInput' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email'></input>
-                    <input name='loginInput' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password'></input>
-                    <button className='loginButton' onClick={handleLogin}>Login</button>
+        <div className='border'>
+            <div className='homeBorder'></div>
+            <div className='loginPage'>
+                <div className='reg'>
+                    <h1 className='register'>Sign Up!</h1>
+                        <input name='loginInput' value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder='First Name'></input>
+                        <input name='loginInput' value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder='Last Name'></input>
+                        <input name='loginInput' value={registerEmail} onChange={(e) => setRegisterEmail(e.target.value)} placeholder='Email'></input>
+                        <input name='loginInput' value={registerPassword} onChange={(e) => setRegisterPassword(e.target.value)} placeholder='Password'></input>
+                        {!isAdmin && <input value={adminKey} onChange={(e) => setAdminKey(e.target.value)} placeholder='Admin Key'></input>}
+                        <div className='adminCheckbox'>
+                            <input type="checkbox" checked={isAdmin === false} id="adminCheckbox" onChange={() => setIsAdmin(!isAdmin)} />
+                            <span style={{color:'white'}}>Admin Account?</span>
+                        </div>
+                        <button className='registerButton' onClick={handleRegister}>Register</button>
+                        <span className='registration'>A confirmation email will be sent upon registration</span>
+                </div>
+                
+                <div className='loginDivider'></div>
+                <div className='log'>
+                    <h1 className='login'>Login!</h1>
+                        <input name='loginInput' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email'></input>
+                        <input name='loginInput' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password'></input>
+                        <button className='loginButton' onClick={handleLogin}>Login</button>
+                </div>
             </div>
-            <div className='reg'>
-                <h1 className='register'>Sign Up!</h1>
-                    <input name='loginInput' value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder='First Name'></input>
-                    <input name='loginInput' value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder='Last Name'></input>
-                    <input name='loginInput' value={registerEmail} onChange={(e) => setRegisterEmail(e.target.value)} placeholder='Email'></input>
-                    <input name='loginInput' value={registerPassword} onChange={(e) => setRegisterPassword(e.target.value)} placeholder='Password'></input>
-                    {!isAdmin && <input value={adminKey} onChange={(e) => setAdminKey(e.target.value)} placeholder='Admin Key'></input>}
-                    <div className='adminCheckbox'>
-                        <input type="checkbox" checked={isAdmin === false} id="adminCheckbox" onChange={() => setIsAdmin(!isAdmin)} />
-                        <span style={{color:'white'}}>Admin Account?</span>
-                    </div>
-                    <button className='registerButton' onClick={handleRegister}>Register</button>
-                    <span className='registration'>A confirmation email will be sent upon registration</span>
-            </div>
+            <div className='homeBorder'></div>
         </div>
     )
 }
