@@ -3,10 +3,6 @@ import {Link} from 'react-router-dom'
 
 const Home = () => {
 
-    // const toLogin = () => {
-    //     // push('login')
-    // }
-
     return (
         <div className='border'>
             <div className='homeBorder'></div>

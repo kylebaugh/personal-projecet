@@ -6,7 +6,20 @@
         color:white
     }
 
+    .homeBorder{
+      width: 0vw;
+    }
+    .homePage{
+      width:100vw
+    }
 
+    /* .rickyPage{
+      margin-top: -10vh;
+    } */
+
+    /* .ricky{
+      height:80vh;
+    } */
 
     /* HEADER PAGE */
     .headerHeader{
@@ -96,15 +109,46 @@
 
 
     /* GLOSSARY PAGE*/
-      .unitBox{
-          width:425px;
+    
+    .glossaryPage{
+      width: 100vw;
+    }
+
+    .unitBox{
+          width:80vw;
       }
 
     /* UNIT PAGE */
-      .itemBox{
-          width:425px;
-      }
 
+    .unitPage{
+      width:100vw;
+    }
+
+    .itemBox{
+        width:80vw;
+    }
+
+  /* TOPIC PAGE */
+
+  .topicSection{
+    max-height:200px;
+    margin-left: -50px;
+  }
+
+  /* LOGIN PAGE */
+  .loginPage{
+    width:100vw;
+  }
+
+
+  /* PROFILE PAGE */
+  .termTop{
+    margin-top: -1vh;
+  }
+  
+  .myTerms{
+    width:60vw;
+  }
 
 
 

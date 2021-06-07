@@ -18,7 +18,7 @@ const Profile = (props) => {
                 console.log(err)
                 console.log('Use effect failed')
             })
-        }, [])
+        }, [user.user_id])
 
 
     return(

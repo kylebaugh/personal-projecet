@@ -16,7 +16,7 @@ const LearnList = (props) => {
                 console.log(err)
                 console.log('Use effect failed')
             })
-        }, [])
+        }, [user.user_id])
 
     const handleRemove = (glossary_id) => {
         axios.delete(`/topics/learnList/${glossary_id}`)
