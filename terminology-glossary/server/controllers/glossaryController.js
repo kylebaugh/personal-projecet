@@ -103,7 +103,7 @@ module.exports = {
         const {glossary_id} = req.params
         await db.glossary.remove_print(user.user_id, glossary_id)
             .then((removed) => {
-                console.log(removed)
+                // console.log(removed)
                 res.status(200).send(removed)
             })
             .catch(err => {

@@ -9,6 +9,7 @@ const Item = (props) => {
     const [newItemName, setNewItemName] = useState('')
     const [newItemDefinition, setNewItemDefinition] = useState('')
     const [editBox, setEditBox] = useState(false)
+    const [addedItem, setAddedItem] = useState(false)
 
     const item = props.item
 
@@ -47,6 +48,8 @@ const Item = (props) => {
                 console.log(err)
                 console.log('Add To List Failed')
             })
+
+            setAddedItem(true)
     }
 
     return(
@@ -56,18 +59,22 @@ const Item = (props) => {
                 <br></br>
                 <div className='unitDefinition'>Definition:{<br></br>}{<br></br>} {item.definition}</div>
                 <br></br>
-                {!user.is_admin && <div className='addToListButton'>
-                    <button
-                        onClick={() => {addToList(item.glossary_id)}}
-                    >Add to My List</button>
-                    </div>}
+                {user && !user.is_admin && 
+                    <div className='addToListButton'>
+                        {!addedItem && <button
+                            onClick={() => {addToList(item.glossary_id)}}
+                        >Add to My List</button>}
+                        {addedItem && <button>Added!</button>}
+                    </div>
+                }
                 <br></br>
             </div>
-            {user.is_admin && <div className='toggleEditItem'>
-                <button onClick={() => {toggleEdit(item.glossary_id)}}>Edit</button>
-                <button 
+            
+            <div className='toggleEditItem'>
+                {user && user.is_admin && <button onClick={() => {toggleEdit(item.glossary_id)}}>Edit</button>}
+                {user && user.is_admin && <button 
                     onClick={() => deleteItem(item.glossary_id)}
-                    >Delete</button>
+                    >Delete</button>}
                     {editBox && <div className='editItemBox'>
                         <input className='newName' placeholder="New Name" value={newItemName} onChange={(e) => setNewItemName(e.target.value)}></input>
                         <input type='text' className='newDefinition' placeholder="New Definition" value={newItemDefinition} onChange={(e) => setNewItemDefinition(e.target.value)}></input>
@@ -76,7 +83,7 @@ const Item = (props) => {
                             <button onClick={() => editItem(item.glossary_id)}>Submit</button>
                         </section>
                         </div>}
-            </div>}
+            </div>
         </div>
     )
 

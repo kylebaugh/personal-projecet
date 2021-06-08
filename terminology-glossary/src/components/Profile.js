@@ -31,19 +31,19 @@ const Profile = (props) => {
 
                     <div className='profilePagePic'>
                         <img src={user.picture} alt='User Profile Pic' style={{width:'20vw', height:'20vw'}} />
-                        {user.admin ?? <section className='profileDetails'>
+                        {user && user.is_admin && <section className='profileDetails'>
                             <p>Account Type: Administrator</p>
                             <p>Items Created: {userItems.length}</p>
                         </section>}
-                        {!user.admin ?? <section className='profileDetails'>
+                        {user && !user.is_admin && <section className='profileDetails'>
                             <p>Account Type: User</p>
                             <p>Items Saved: </p>
                         </section>}
                     </div>
                     
                     <div style={{display:'flex', flexDirection:'column'}}>
-                        {user.is_admin && <p className='termTop'>My Glossary Items</p>}
-                        {!user.is_admin && <p className='termTop'>My Learning Items</p>}
+                        {/* {user.is_admin && <p className='termTop'>My Glossary Items</p>}
+                        {!user.is_admin && <p className='termTop'>My Learning Items</p>} */}
                         {!user.is_admin && <button className='printButton'>Print Flashcards</button>}
                         {user.is_admin && <div>
                             <AdminList />

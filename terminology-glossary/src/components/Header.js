@@ -59,7 +59,13 @@ const Header = (props) => {
                             {!user && <span className='headerMenuItem' onClick={() => {toLogin()}} >Login</span>}
                             {user && <span className='headerMenuItem' onClick={() => {logout()}}>Logout</span>}
                         </div>
-                        <span className='headerMenuIcon' style={{cursor:'pointer'}} onClick={() => setTogglemenu(!toggleMenu)}>Menu</span>
+                        <div className='headerMenuIcon' style={{cursor:'pointer'}} onClick={() => setTogglemenu(!toggleMenu)}>
+                            <div className='menuBox'>
+                                <div className='menuLine'></div>
+                                <div className='menuLine'></div>
+                                <div className='menuLine'></div>
+                            </div>
+                            </div>
                     </div>
                 </header>
             </div>

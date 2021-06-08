@@ -41,7 +41,7 @@ const Unit = (props) => {
             <div className='unitPage'>
                 <h1 className='glossaryPageName'>Unit {props.match.params.unit_id}</h1>
                 <div className='addSection'>
-                    {user.is_admin && <button className='addAddButton' onClick={handleAdd}>Add Item</button>}
+                    {user && user.is_admin && <button className='addAddButton' onClick={handleAdd}>Add Item</button>}
                     {addItemBox && <button className='addSubmitButton'
                         onClick={addItem}
                         >Submit</button>}

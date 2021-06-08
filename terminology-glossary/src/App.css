@@ -66,6 +66,7 @@ button:hover{
 .signUpButton{
   font-size: 40px;
   font-weight: bolder;
+  margin-top: -5vh;
 }
 
 .homeRegisterButton{
@@ -101,6 +102,7 @@ button:hover{
 
 .headerIcon{
   display: flex;
+  height: 15vh;
   justify-content: space-between;
   align-items: center;
   background-color: lightcyan;
@@ -120,13 +122,37 @@ button:hover{
   display:none
 }
 
+.menuBox{
+  height:7vh;
+  width:7vh;
+  border-style: solid;
+  border-color:black;
+  border-radius: 18%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.menuBox:hover{
+  border-color: blue;
+}
+
+.menuLine{
+  height: .75vh;
+  width: 5vh;
+  background-color: black;
+  border-radius: 25%;
+}
+
 .headerMenuItem{
   margin-right: 20px;
-  text-decoration:blue;
+  color: black;
+  text-decoration:black;
 }
 
 .headerMenuItem:hover{
-  color:black;
+  color:blue;
   cursor:pointer
 }
 
@@ -134,24 +160,6 @@ button:hover{
   display: none
 }
 
-/* .mobileMenu{
-  padding-right: 15px;
-  gap:20px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: white;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  font-size: 25px ;
-  color: blue;
-  text-decoration: blue;
-}
-
-.mobileMenuItem{
-  text-decoration:blue;
-} */
 
 
 /* "GLOSSARY" PAGE */
@@ -256,6 +264,7 @@ button:hover{
 }
 
 .loginDivider{
+  margin-top: 3vh;
   width:.5px;
   height:65vh;
   border-style: solid;
@@ -398,16 +407,19 @@ button:hover{
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
+  margin-left: 110px;
 
 }
 
 .topicList{
   display: flex;
-  width:20vw;
+  min-width:20vw;
   color:white;
-  margin-left: 50px;
+  /* margin-left: 50px; */
+  gap:50px;
   margin-top: 10px;
   margin-bottom: 10px;
+  /* background-color: green; */
 }
 
 
@@ -427,6 +439,7 @@ button:hover{
   gap: 30px;
   padding-right: 25px;
   padding-left: 25px;
+  /* padding-bottom: 3vh; */
 }
 
 .profileDetails{
@@ -434,7 +447,7 @@ button:hover{
   flex-direction: column;
   justify-content: center;
   width: 20vw;
-  min-height: 17.7vw;
+  height: 19vh;
   color: white;
   border-style: solid;
   border-color: black;
@@ -442,6 +455,7 @@ button:hover{
 
 .termTop{
   font-size: 20px;
+  padding-top: 1.5vh;
   font-weight: bold;
 }
 
@@ -453,7 +467,7 @@ button:hover{
 
 .myTerms{
   width:50vw;
-  min-height: 50vh;
+  min-height: 59.1vh;
   border-style: solid;
   border-color: black;
   /* background-color: green; */

@@ -23,6 +23,7 @@ const AdminList = (props) => {
     return (
         <div>
             {user.is_admin && <div className='myTerms'>
+            <h3 className='termTop'>My Glossary Items</h3>
             {userItems.map((item)=> {
                 return(
                     <div

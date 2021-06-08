@@ -91,20 +91,20 @@
         padding-right: 10px;
         font-family:Georgia, 'Times New Roman', Times, serif;
         font-size: 25px ;
-        color: blue;
-        text-decoration: blue;
+        color: black;
+        text-decoration: black;
       }
 
       .headerMenuIcon{
         display:flex
       }
       .mobileMenuItem{
-        text-decoration:blue;
+        text-decoration:black;
         cursor:pointer;
       }
 
       .mobileMenuItem:hover{
-          color:black
+          color:blue
       }
 
 
@@ -132,7 +132,16 @@
 
   .topicSection{
     max-height:200px;
-    margin-left: -50px;
+    margin-left: 0px;
+    gap:3vw;
+    justify-content: flex-start;
+    /* margin-left: -50px; */
+  }
+
+  .topicList{
+    display:flex;
+    align-content: left ;
+    gap: 3vw;
   }
 
   /* LOGIN PAGE */
@@ -142,6 +151,10 @@
 
 
   /* PROFILE PAGE */
+  .profilePage{
+    width:100vw
+  }
+
   .termTop{
     margin-top: -1vh;
   }

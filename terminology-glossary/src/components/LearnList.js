@@ -33,6 +33,7 @@ const LearnList = (props) => {
     return (
         <div>
             {user && <div className='myTerms'>
+            <h3 className='termTop'>My Learning Items</h3>
             {learnList.map((items)=> {
                 return(
                     <div
