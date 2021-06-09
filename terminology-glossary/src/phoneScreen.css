@@ -93,20 +93,24 @@
         font-family:Georgia, 'Times New Roman', Times, serif;
         font-size: 25px ;
         color: black;
-        text-decoration: black;
+        text-decoration: white;
+        font-weight:500;
       }
+
+
 
       .headerMenuIcon{
         display:flex;
+        cursor:pointer;
         /* background-color: white; */
       }
 
       .menuBox{
-        background-color: white;
+        background-color: lightblue;
       }
 
       .menuBox:hover{
-        background-color: lightblue;
+        background-color: white;
       }
 
       .mobileMenuItem{
@@ -115,9 +119,19 @@
       }
 
       .mobileMenuItem:hover{
-          color:blue
+          color:white
       }
 
+
+    /* LOGIN PAGE */
+
+    .reg{
+      margin-top: 14vh;
+    }
+
+    .log{
+      margin-top: 20vh;
+    }
 
     /* GLOSSARY PAGE*/
     
@@ -166,16 +180,49 @@
     width:100vw
   }
 
+  .profilePagePic{
+    padding-right: 2vw;
+  }
+
+  .profileDivider{
+    width:94vw;
+  }
+
+  .profilePic{
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .changeProfileButtons{
+    width:25vw;
+    margin-left: .5vw;
+    margin-bottom: -1vw;
+  }
+
+  .profileDetails{
+    width: 25vw;
+    height: 22.5vw;
+  }
+
+  .test{
+    width:90vw
+  }
+
   .termTop{
     margin-top: -1vh;
   }
   
   .myTerms{
-    width:60vw;
+    width:62vw;
   }
 
+  .dropzone{
+    padding-bottom: 1.75vh;
+  }
 
-
+  .printButton{
+    margin-top: -1vh;
+  }
 
 
 }

@@ -56,8 +56,11 @@ const Item = (props) => {
         <div className='itemBox'>
             <div>
                 <div className='itemName'>{item.name}</div>
-                <br></br>
-                <div className='unitDefinition'>Definition:{<br></br>}{<br></br>} {item.definition}</div>
+                {/* <br></br> */}
+                <div className='itemDivider'></div>
+                <div className='unitDefinitionHead'>Definition:</div>
+                {<br></br>}
+                <div className='unitDefinition'>{item.definition}</div>
                 <br></br>
                 {user && !user.is_admin && 
                     <div className='addToListButton'>
@@ -71,18 +74,17 @@ const Item = (props) => {
             </div>
             
             <div className='toggleEditItem'>
-                {user && user.is_admin && <button onClick={() => {toggleEdit(item.glossary_id)}}>Edit</button>}
-                {user && user.is_admin && <button 
-                    onClick={() => deleteItem(item.glossary_id)}
-                    >Delete</button>}
-                    {editBox && <div className='editItemBox'>
-                        <input className='newName' placeholder="New Name" value={newItemName} onChange={(e) => setNewItemName(e.target.value)}></input>
-                        <input type='text' className='newDefinition' placeholder="New Definition" value={newItemDefinition} onChange={(e) => setNewItemDefinition(e.target.value)}></input>
-                        <section style={{display:'flex', flexDirection:'row'}}>
-                            <button onClick={toggleEdit}>Cancel</button>
-                            <button onClick={() => editItem(item.glossary_id)}>Submit</button>
-                        </section>
-                        </div>}
+                {user && user.is_admin && !editBox &&<button onClick={() => {toggleEdit(item.glossary_id)}}>Edit</button>}
+                {user && user.is_admin && !editBox &&<button onClick={() => deleteItem(item.glossary_id)}>Delete</button>}
+                {editBox && <div className='editItemBox'>
+                    <input className='newName' placeholder="New Name" value={newItemName} onChange={(e) => setNewItemName(e.target.value)}></input>
+                    <input type='text' className='newDefinition' placeholder="New Definition" value={newItemDefinition} onChange={(e) => setNewItemDefinition(e.target.value)}></input>
+                    {/* <section style={{display:'flex', flexDirection:'row', justifyContent:'space-between'}}> */}
+                    <section style={{display:'flex', flexDirection:'row'}}>
+                        <button onClick={toggleEdit}>Cancel</button>
+                        <button onClick={() => editItem(item.glossary_id)}>Submit</button>
+                    </section>
+                    </div>}
             </div>
         </div>
     )

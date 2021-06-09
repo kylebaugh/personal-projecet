@@ -135,7 +135,7 @@ button:hover{
 }
 
 .menuBox:hover{
-  border-color: blue;
+  border-color: black;
 }
 
 .menuLine{
@@ -207,7 +207,7 @@ button:hover{
   padding-right: 2vw;
   padding-bottom: 10px;
   border-style: solid;
-  border-color: black;
+  border-color: white;
   /* background-color: green; */
 }
 
@@ -227,7 +227,16 @@ button:hover{
   color: white;
   margin-left: 10px;
   margin-top: 15px;
-  text-decoration: none;
+  text-decoration: underline;
+}
+
+.unitDefinitionHead{
+  font-size: 20px;
+  display:flex;
+  align-items: left;
+  color:white;
+  margin-left: 10px;
+  padding-right: 10px;
 }
 
 .unitDefinition{
@@ -268,9 +277,9 @@ button:hover{
   width:.5px;
   height:65vh;
   border-style: solid;
-  border-color: black;
+  border-color: white;
   align-self: center;
-  background-color: black;
+  background-color: white;
 }
 
 .reg{
@@ -327,7 +336,15 @@ button:hover{
   margin-bottom: 25px;
   padding-left: 10px;
   border-style: solid;
-  border-color: black;
+  border-color: white;
+}
+
+.itemDivider{
+  width:68vw;
+  height:.4vh;
+  background-color: white;
+  align-self: center;
+  margin-bottom: 2.5vh;
 }
 
 .toggleEditItem{
@@ -433,26 +450,47 @@ button:hover{
   color:white
 }
 
+.profileDivider{
+  width:73vw;
+  height:.4vh;
+  background-color: white;
+  align-self: center;
+  margin-bottom: 2.5vh;
+}
+
+.profileDiv{
+  display: flex;
+  justify-content: center;
+  gap:2vw;
+  align-content: space-between;
+}
+
+.profilePic{
+  width: 15vw;
+  height: 15vw;
+  align-self: center;
+}
+
 .profilePagePic{
   display: flex;
   flex-direction: column;
   gap: 30px;
   padding-right: 25px;
-  padding-left: 25px;
-  /* padding-bottom: 3vh; */
+  padding-left: -2vw;
 }
 
 .changeProfile{
   margin-top: -3vh;
-  /* margin-bottom: -3vh; */
-  width: fit-content;
+  max-width: 20vw;
+  display: flex;
+  /* justify-content: center; */
   align-self: center;
 }
 
 .changeProfileButtons{
   display: flex;
   justify-content: space-between;
-  width:20vw;
+  width:15vw;
   margin-top: -3vh;
 }
 
@@ -461,13 +499,14 @@ button:hover{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 20vw;
-  height: 19vh;
+  width: 15vw;
+  min-height: 19vh;
   color: white;
   border-style: solid;
-  border-color: black;
+  border-color: white;
   margin-top: -3vh;
   margin-bottom: 3vh;
+  align-self: center;
 }
 
 .termTop{
@@ -483,10 +522,10 @@ button:hover{
 }
 
 .myTerms{
-  width:50vw;
-  min-height: 59.1vh;
+  width:49.5vw;
+  height: 55vh;
   border-style: solid;
-  border-color: black;
+  border-color: white;
   /* background-color: green; */
   margin-bottom: 2.5vh;
   padding-top: 1.5vh;
@@ -498,4 +537,24 @@ button:hover{
   padding-left: 1.5vw;
   padding-right: 1.5vw;
   padding-bottom: 1vw;
+}
+
+.dropzone{
+  position: inherit;
+  align-self: center;
+  width: 15vw;
+  height: 12vh;
+  border-width: 5;
+  margin-top: -1vh;
+  border-color: white;
+  border-style: dashed;
+  border-radius: 5;
+  display: inline-block;
+  font-size: 17;
+}
+
+.dropzone:hover{
+  border-color: black;
+  cursor:pointer;
+  color:black;
 }

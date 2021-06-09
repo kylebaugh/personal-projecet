@@ -41,10 +41,7 @@ const Unit = (props) => {
             <div className='unitPage'>
                 <h1 className='glossaryPageName'>Unit {props.match.params.unit_id}</h1>
                 <div className='addSection'>
-                    {user && user.is_admin && <button className='addAddButton' onClick={handleAdd}>Add Item</button>}
-                    {addItemBox && <button className='addSubmitButton'
-                        onClick={addItem}
-                        >Submit</button>}
+                    {user && user.is_admin && !addItemBox &&<button className='addAddButton' onClick={handleAdd}>Add Item</button>}
                 </div>
                 {addItemBox && 
                     <div className='addItemBox'>
@@ -52,6 +49,10 @@ const Unit = (props) => {
                         <input className='addDefinition' value={newItemDefinition} onChange={(e) => setNewItemDefinition(e.target.value)} placeholder='Description'/>
                         
                     </div>}
+                    <div>
+                    {user && user.is_admin && addItemBox &&<button className='addAddButton' onClick={handleAdd}>Cancel</button>}
+                    {addItemBox && <button className='addSubmitButton' onClick={addItem}>Submit</button>}
+                    </div>
                 {unit.map((item) => {
                     let id = item.glossary_id
                     return (

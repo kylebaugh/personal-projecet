@@ -8,12 +8,16 @@ import Dropzone from 'react-dropzone'
 import {GridLoader} from 'react-spinners'
 import {useDispatch} from 'react-redux'
 import {v4 as randomString} from 'uuid'
+import {useHistory} from 'react-router-dom'
+
 
 const Profile = (props) => {
     const {user} = useSelector((state) => state.authReducer)
     const dispatch = useDispatch()
+    const {push} = useHistory()
 
     const [userItems, setUserItems] = useState([])
+    const [learnCount, setLearnCount] = useState([])
     const [showDropzone, setShowDropzone] = useState(false)
     const [isUploading, setIsUploading] = useState(false)
     const [url, setUrl] = useState('')
@@ -31,6 +35,17 @@ const Profile = (props) => {
                 console.log('Use effect failed')
             })
         }, [user.user_id, user])
+
+    useEffect(()=>{
+        axios.get(`/topics/learnList/${user.user_id}`)
+        .then((res) => {
+            setLearnCount(res.data)
+        })
+        .catch(err => {
+            console.log(err)
+            console.log('Use effect failed')
+        })
+    }, [])
     
 
     const toggleDropzone = () => {
@@ -105,16 +120,20 @@ const Profile = (props) => {
             })
     }
 
+    const handlePrint = () => {
+      push('/learnMore')
+    }
+
     return(
         <div className='border'>
             <div className='homeBorder'></div>
             <div className='profilePage'>
                 <h1>{user.firstname}'s Profile</h1>
-                
-                <div style={{display:'flex'}}>
+                <div className='profileDivider'></div>
+                <div className='profileDiv'>
 
                     <div className='profilePagePic'>
-                        <img src={user.picture} alt='User Profile Pic' style={{width:'20vw', height:'20vw'}} />
+                        <img className='profilePic' src={user.picture} alt='User Profile Pic'/>
                         {!showDropzone && <button className='changeProfile' onClick={() => {toggleDropzone()}}>Change Profile Pic</button>}
                         {showDropzone && <div className='changeProfileButtons'>
                         <button onClick={() => {toggleDropzone()}}>Cancel</button>
@@ -127,19 +146,7 @@ const Profile = (props) => {
                                 accept="image/*"
                                 multiple={false}>
                                 {({getRootProps, getInputProps}) => (
-                                <div 
-                                    style = {{
-                                    position: 'inherit',
-                                    alignSelf:'center',
-                                    width: '19vw',
-                                    height: '12vh',
-                                    borderWidth: 5,
-                                    marginTop: '-1vh',
-                                    borderColor: 'gray',
-                                    borderStyle: 'dashed',
-                                    borderRadius: 5,
-                                    display: 'inline-block',
-                                    fontSize: 17,}}
+                                <div className='dropzone'
                                     {...getRootProps()}>
                                     <input {...getInputProps()} />
                                     {isUploading ? <GridLoader /> : <p>Drop files here, or click to select files</p>}
@@ -154,18 +161,18 @@ const Profile = (props) => {
                         </section>}
                         {user && !user.is_admin && <section className='profileDetails'>
                             <p>Account Type: User</p>
-                            <p>Items Saved: </p>
+                            <p>Items Saved: {learnCount.length}</p>
                         </section>}
                     </div>
                     
                     <div style={{display:'flex', flexDirection:'column'}}>
-                        {!user.is_admin && <button className='printButton'>Print Flashcards</button>}
                         {user.is_admin && <div>
                             <AdminList />
                         </div>}
                         {!user.is_admin && <div>
                             <LearnList />
                             </div>}
+                        {!user.is_admin && <button className='printButton' onClick={handlePrint}>Print Flashcards</button>}
                     </div>
                 </div>
                 
