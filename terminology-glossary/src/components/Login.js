@@ -22,7 +22,7 @@ const Login = (props) =>{
     const [isAdmin, setIsAdmin] = useState(true)
     
     useEffect(() => {
-        console.log(user)
+        console.log('Use effect triggered')
     }, [user])
 
     const handleLogin = () => {
@@ -30,7 +30,7 @@ const Login = (props) =>{
             .then((res) => {
                 dispatch(setUser(res.data))
                 localStorage.setItem('user_id', JSON.stringify(res.data))
-                console.log(res.data)
+                // console.log(res.data)
                 if(res.data === 409){
                     alert('Email not found')
                 }

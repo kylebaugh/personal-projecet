@@ -1,7 +1,7 @@
 INSERT INTO users
 (firstName, lastName, email, password, admin_key, is_admin, picture)
 VALUES
-('K', 'B', 'kyle@kyle.com', 'asdf', 'lastJediSucked', true, 'https://www.exoffender.org/wp-content/uploads/2016/09/empty-profile.png');
+('K', 'B', 'kyle@kyle.com', 'pass', 'lastJediSucked', true, 'https://www.exoffender.org/wp-content/uploads/2016/09/empty-profile.png');
 
 INSERT INTO unit
 (name)

@@ -78,7 +78,7 @@ module.exports = {
                 const salt = bcrypt.genSaltSync(10)
                 const hash = bcrypt.hashSync(registerPassword, salt)
                 const [user] = await db.auth.register_user(firstName, lastName, registerEmail, hash, 'user')
-                const [asdf] = await db.auth.check_email(registerEmail)
+                const [account] = await db.auth.check_email(registerEmail)
                 
                 transporter.sendMail(info, function(error, info){
                     if(error){
@@ -89,9 +89,9 @@ module.exports = {
                     }
                 })
                 
-                const isAuthenticated = bcrypt.compareSync(registerPassword, asdf.password)
-                delete asdf.password
-                req.session.user = asdf
+                const isAuthenticated = bcrypt.compareSync(registerPassword, account.password)
+                delete account.password
+                req.session.user = account
                 return res.status(200).send(req.session.user)
             }
     },
@@ -119,4 +119,22 @@ module.exports = {
         res.status(200).send('Logout complete.')
 
     },
+
+    changePicture: async(req, res) => {
+        const db = req.app.get('db')
+        const {user_id} = req.session.user
+        const {picture} = req.body
+        await db.auth.change_pic(user_id, picture)
+            .then(([user]) => {
+                delete user.password
+                req.session.user = user
+                return res.status(200).send(req.session.user)
+            })
+            .catch(err => {
+                console.log(err)
+                console.log('changePicture failed')
+                res.status(500).send(err)
+            })
+        
+    }
 }

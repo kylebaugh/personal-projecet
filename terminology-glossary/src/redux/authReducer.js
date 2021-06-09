@@ -21,6 +21,7 @@ export function clearUser(){
     }
 }
 
+
 export default function loginReducer(state = initialState, action){
     switch(action.type){
         case SET_USER:

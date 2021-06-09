@@ -65,7 +65,7 @@ module.exports = {
         .catch((err) => {
             console.log(err)
             console.log('getUnitTopic failed')
-            res.status(500).send('asdf')
+            res.status(500).send('glossary topicUnit Failed')
         })
     }, 
 

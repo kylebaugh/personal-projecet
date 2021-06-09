@@ -26,7 +26,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: white;
+        background-color: lightblue;
         padding-left: 10px;
         padding-right: 10px;
         font-family:Georgia, 'Times New Roman', Times, serif;
@@ -39,7 +39,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: white;
+        background-color: lightblue;
         padding-left: 10px;
         padding-right: 10px;
         font-family:Georgia, 'Times New Roman', Times, serif;
@@ -56,6 +56,7 @@
         display:none;
         padding-left: 20px;
         text-decoration:blue;
+        background-color: lightblue;
       }
       
       .headerMenuIcon{
@@ -86,7 +87,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        background-color: white;
+        background-color: lightblue;
         padding-left: 10px;
         padding-right: 10px;
         font-family:Georgia, 'Times New Roman', Times, serif;
@@ -96,8 +97,18 @@
       }
 
       .headerMenuIcon{
-        display:flex
+        display:flex;
+        /* background-color: white; */
       }
+
+      .menuBox{
+        background-color: white;
+      }
+
+      .menuBox:hover{
+        background-color: lightblue;
+      }
+
       .mobileMenuItem{
         text-decoration:black;
         cursor:pointer;
