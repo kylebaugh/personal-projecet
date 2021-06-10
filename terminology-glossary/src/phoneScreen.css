@@ -157,23 +157,65 @@
     }
 
     .addName{
-      width:80vw;
+      width:50%;
     }
 
     .addDefinition{
-      width:80vw;
+      width:50%;
     }
 
     .newName{
-      width: 72.5vw;
+      width: 50%;
     }
     
     .newDefinition{
-      width:72.5vw;
+      width:50%;
     }
 
     .itemBox{
+      /* display:none; */
         width:80vw;
+    }
+
+    .itemDivider{
+      /* display:none; */
+      width:90%;
+    }
+
+    .itemName{
+      /* display:none; */
+      width:90%
+    }
+
+    .unitDefinitionHead{
+      /* display:none; */
+      width:90%
+    }
+    
+    .unitDefinition{
+      /* display:none; */
+      /* width:90%; */
+      /* margin-left: -10; */
+    }
+
+    .unitDefinitionHead{
+      /* display:none; */
+      width:90%
+    }
+
+    .addToListButton{
+      /* display:none; */
+      max-width: 90%;
+    }
+
+    .toggleEditItem{
+      /* display:none; */
+      max-width: 90%;
+    }
+
+    .editItemBox{
+      /* display:none; */
+      max-width: 90%;
     }
 
   /* TOPIC PAGE */

@@ -1,3 +1,7 @@
+
+*{
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
   display: flex;
@@ -235,15 +239,19 @@ button:hover{
   display:flex;
   align-items: left;
   color:white;
+  /* background-color: green; */
   margin-left: 10px;
   padding-right: 10px;
 }
 
 .unitDefinition{
   display:flex;
+  max-width:95;
   align-items: left;
   color:white;
-  margin-left: 10px;
+  /* background-color: blue; */
+  padding-left: 10px;
+  /* margin-left: 10px; */
   padding-right: 10px;
 }
 
@@ -330,11 +338,11 @@ button:hover{
   align-items: flex-start;
   text-align: left;
   height: fit-content;
-  width: 70vw;
+  width: 70%;
   margin-left: 25px;
   margin-right: 25px;
   margin-bottom: 25px;
-  padding-left: 10px;
+  /* padding: 10px; */
   border-style: solid;
   border-color: white;
 }
