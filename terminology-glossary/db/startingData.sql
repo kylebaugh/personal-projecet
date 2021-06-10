@@ -47,6 +47,24 @@ VALUES
 (37, 'Declaration Function', 'A Declaration Function uses this format: let nameOfFunction() {//Code to execute}', 1),
 (37, 'Expression Function', 'An Expression Function uses this format: let nameOfFunction = function(){//Code to execute}', 1),
 (37, 'Scope', 'Scope is an incredibly important topic in Javascript because it determines what has access to the variables we delcare. The rule of thumb is that code blocks are able to look up in scope but not down. Check this article for more info: https://www.w3schools.com/js/js_scope.asp', 1)
+
+(37, 'Arrow Functions', 'Arrow Functions allow us to write shorter, more concise functions. For example, the function "hello = function (){return "Hello world!";}" can be rewritten with an Arrow Function as "hello = () => {"Hello World!"}"', 2), 
+(37, 'Array Methods', 'Arrays are list-like objects whose prototype has methods to perform traversal and mutation operations. Neither the length of a JavaScript array nor the types of its elements are fixed. There are multiple types of Array Methods. Some of the most common are forEach, .map, .filter and .reduce. See https://www.w3schools.com/js/js_array_methods.asp for more info.', 2), 
+(37, 'Spread Operator', 'The Spread Operator "...array-or-object" allows the user to bring an entire Object or Array into a new Object or Array. For example, if array1 = [1,2,3], we could add the entire array into a new array as follows: array2 = ["a", "b", "c", ...array1]. This would be exactly the same as if we had typed in each item as its own array value(array2 = ["a", "b", "c", 1, 2, 3]).', 2), 
+(37, 'Position', 'The position property is used to specify the position of an element on the screen. These are broken down into 5 values: static, relative, absolute, fixed, and sticky.', 2), 
+(37, 'Flex-Box', 'Flex box is a tool in CSS that we can use to create a layout, align items, and distribute white space inside of a container. We will apply the display: flex to the parent container, and then use that flex container to manipulate the layout for the children elements inside.', 2), 
+(37, 'The DOM', 'DOM is the acronym we use for Document Object Model. The DOM is an object representation or blueprint for our web pages structure and content. We can interact with the DOM to manipulate our web page to change how our HTML elements are being displayed, how they are interacted with, change content, etc.It is easy to think of the DOM as a tree. Each element that exists on the DOM is known as a node. We can target these nodes with Javascript to create functionality within our page.', 2), 
+(37, 'Context', 'Outside of JavaScript, context means the surrounding information that gives a better understanding and more clarity to a situation. This also applies the same way to JavaScript. Since objects are the building blocks of JavaScript, there is a special object we can use to access the context of our code that is being executed. The object is referred to as this.', 2), 
+
+(37, 'Constructors', 'A constructor function is special function we can use in JavaScript to create a new object. It is easy to think that a constructor function is a blueprint to the object we want to build.We will create a constructor function just like any other function, except this time it will start with a capital letter. For example, fucntion Car(){}', 2), 
+(37, 'Classes', 'We will use the class keyword to declare a new class. It is important to note that classes will start will capital letter. We can create an instance or the object from this class by creating a variable and calling upon the class using the new keyword. new is the keyword we use to invoke a class.', 3), 
+(37, 'Closures', 'A closure function is a function that is returned from another function. The inner function that is returned will rely on data that is declared in the outer functions scope.', 3), 
+(37, 'React', 'React is a Javascript library that was created and is maintained by Facebook. React is used to manage the DOM and create highly performant user interfaces and front end applications. It is highly popular due to its ability to make frontend Javascript development easier, utilization of JSX, Virtual DOM, and Component Based Architecture.', 3), 
+(37, 'Components', 'Components are the building blocks of a React application.A component is either a class or a function that will return a React element that will describe how a section of the user interface will be displayed and interacted with.', 3), 
+(37, 'State', 'Class components can hold what is called state. State is what is used to keep track of data that is specific to a component. State is simply just an object that uses key / value pairs.', 3), 
+(37, 'Data Flow', 'React will handle its data using unidirectional data flow. This means that data is passed down from the top of the application to the bottom. We can determine what top and bottom are using our component architecture design.', 3), 
+(37, 'Props', 'Values from a components state or methods can be passed to a child component through props. Using props allow us to pass data from a parent component to a child component. We do this rendering a child component inside of our JSX then setting an attribute on the rendered component with the data that we want to pass as a value for the attribute.', 3), 
+(37, 'Lifecycle', 'The component lifecycle refers to the "life" and "death" of a component on the viewport. There are three main phases to a components lifecycle: Mounting, Updating, and Unmounting.', 3)
 ;
 
 
@@ -55,5 +73,18 @@ INSERT INTO topics
 (unit_id, topic_name)
 VALUES
 (1, 'GitHub'), (1, 'HTML'), (1, 'CSS'), (1, 'Intro to JavaScript'), (1, 'Data Types'), (1, 'If Statements'), (1, 'Intro to Functions'), (1, 'Scope'),
-(2, 'Objects'), (2, 'Array Methods'), (2, 'Arrow Functions'), (2, 'Callback Functions'), (2, 'Spread Operator'), (2, 'NESTING')
-;
+
+(2, 'Objects'), (2, 'Array Methods'), (2, 'Arrow Functions'), (2, 'Callback Functions'), (2, 'Spread Operator'), (2, 'Nesting'), (2, 'Flex-box'),
+
+(3, 'JS Classes'), (3, 'JS Closures'), (3, 'React Intro'), (3, 'Components'), 
+(3, 'State'), (3, 'Data Flow'), (3, 'Handler Functions'), (3, 'JSX Intro'), 
+
+(4, 'Server Requests'), (4, 'Axios'), (4, 'NPM'), (4, 'Node Modules'), 
+(4, 'Express'), (4, 'Controllers'), (4, 'Middleware'), (4, 'Postman'), 
+
+(5, 'Responsive Design'), (5, 'Animations'), (5, 'Transitions'), (5, 'PostgreSQL'), 
+(5, 'Massive'), (5, 'Heroku'), (5, 'Routing'), (5, 'Redux'), (5, 'Bcrypt'), (5, 'Cookies'), 
+(5, 'Sessions'), (5, 'Authentication'), (5, 'DB Relationships'), (5, 'Foreign Keys'), (5, 'Joins'), (5, 'Sub-Queries'), 
+
+(6, 'Testing'), (6, 'React Hooks'), (6, 'HOCs'), (6, 'Render Props'), 
+(6, 'JS Promises'), (6, 'JS Recursion'), (6, 'JS Memoization');
