@@ -4,6 +4,7 @@ const express = require('express')
 const massive = require('massive')
 const session = require('express-session')
 const aws = require('aws-sdk');
+const path = require('path')
 
 const {CONNECTION_STRING, SERVER_PORT, SESSION_SECRET, S3_BUCKET, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY} = process.env
 
@@ -66,6 +67,8 @@ app.delete('/unit/deleteItem/:glossary_id', unitCtrl.deleteItem)
 app.put('/unit/editItem/:glossary_id', unitCtrl.editItem)
 
 
+
+
 //S3
 
 app.get('/api/signs3', (req, res) => {
@@ -101,3 +104,10 @@ app.get('/api/signs3', (req, res) => {
     return res.send(returnData)
   });
 });
+
+// Server
+
+app.use(express.static(__dirname + '/../build'))
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build/index.html'))
+})
