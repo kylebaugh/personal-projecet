@@ -284,12 +284,26 @@
   .myTerms{
     width:62vw;
     min-height: fit-content;
-    background-color: green;
+    /* background-color: green; */
   }
 
   .dropzone{
-    padding-bottom: 1.75vh;
+    /* padding-bottom: -5vh; */
     width:25vw;
+    /* background-color: pink; */
+    min-height: 8vh;
+    align-self: center;
+    padding:1vh;
+  }
+
+  .dropText{
+    align-self: center;
+    min-height: 8vh;
+    margin:0;
+    padding:0;
+
+    /* background-color: green;
+    margin-top: 1.5vh; */
   }
 
   .printButton{

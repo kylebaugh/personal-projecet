@@ -152,22 +152,6 @@ const Profile = (props) => {
                                 multiple={false}>
                                 {({getRootProps, getInputProps}) => (
                                 <div className='dropzone'
-                                  style={{
-                                    position: 'inherit',
-                                    alignSelf:'center',
-                                    textAlign:'center',
-                                    width: "15vw",
-                                    height: '12vh',
-                                    borderWidth: 5,
-                                    marginTop: '-2.5vh',
-                                    paddingBottom:'2vh',
-                                    borderColor: 'white',
-                                    borderStyle: 'dashed',
-                                    borderRadius: 5,
-                                    display: 'inline-block',
-                                    fontSize: 17,
-
-                                  }}
                                     {...getRootProps()}>
                                     <input {...getInputProps()} />
                                     {isUploading ? <GridLoader /> : <p className='dropText'>Drop files here, or click to select files</p>}

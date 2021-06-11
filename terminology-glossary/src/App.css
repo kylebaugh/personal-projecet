@@ -564,19 +564,23 @@ button:hover{
   padding-bottom: 1vw;
 }
 
-/* .dropzone{
+.dropzone{
   position: inherit;
   align-self: center;
+  align-content: center;
   width: 15vw;
-  height: 12vh;
-  border-width: 5;
+  min-height: 10vh;
+  border-width: 5px;
   margin-top: -2vh;
+  /* background-color: yellow; */
+  /* padding */
+  /* padding-bottom: 2vh; */
   border-color: white;
   border-style: dashed;
-  border-radius: 5;
+  border-radius: 5%;
   display: inline-block;
   font-size: 17;
-} */
+}
 
 .dropzone:hover{
   border-color: black;
@@ -585,5 +589,6 @@ button:hover{
 }
 
 .dropText{
+  /* background-color: green; */
   margin-top: 1.5vh;
 }
