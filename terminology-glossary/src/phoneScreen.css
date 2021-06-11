@@ -1,4 +1,4 @@
-@media (max-width: 650px){
+@media only screen and (max-width: 650px){
 
 
     /* Home Page */
@@ -223,7 +223,9 @@
 
   .topicSection{
     min-height: 200px;
-    /* max-width: 35vw; */
+    max-height:1000px;
+    width: 95%;
+    /* background-color: red; */
     margin-left: 0px;
     gap:3vw;
     justify-content: flex-start;
@@ -232,8 +234,9 @@
 
   .topicList{
     display:flex;
+    flex-direction: column;
     align-content: left ;
-    max-width: 35vw;
+    width: 50%;
     /* background-color: green; */
     gap: 3vw;
   }
