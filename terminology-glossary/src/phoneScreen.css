@@ -283,6 +283,8 @@
   
   .myTerms{
     width:62vw;
+    min-height: fit-content;
+    background-color: green;
   }
 
   .dropzone{

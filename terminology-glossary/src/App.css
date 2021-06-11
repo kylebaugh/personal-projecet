@@ -548,7 +548,7 @@ button:hover{
 
 .myTerms{
   width:49.5vw;
-  height: 55vh;
+  min-height: 55vh;
   border-style: solid;
   border-color: white;
   /* background-color: green; */
@@ -564,22 +564,26 @@ button:hover{
   padding-bottom: 1vw;
 }
 
-.dropzone{
+/* .dropzone{
   position: inherit;
   align-self: center;
   width: 15vw;
   height: 12vh;
   border-width: 5;
-  margin-top: -1vh;
+  margin-top: -2vh;
   border-color: white;
   border-style: dashed;
   border-radius: 5;
   display: inline-block;
   font-size: 17;
-}
+} */
 
 .dropzone:hover{
   border-color: black;
   cursor:pointer;
   color:black;
+}
+
+.dropText{
+  margin-top: 1.5vh;
 }

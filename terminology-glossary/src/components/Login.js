@@ -86,7 +86,7 @@ const Login = (props) =>{
                 <div className='log'>
                     <h1 className='login'>Login!</h1>
                         <input name='loginInput' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email'></input>
-                        <input name='loginInput' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password'></input>
+                        <input name='loginInput' type='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password'></input>
                         <button className='loginButton' onClick={handleLogin}>Login</button>
                 </div>
             </div>
