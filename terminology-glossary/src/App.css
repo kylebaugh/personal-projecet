@@ -51,7 +51,7 @@ button:hover{
 }
 
 .homeWelcome{
-  font-size: 50px;
+  font-size: 5vw;
   padding-left: 10px;
   padding-right: 10px;
   font-weight: bolder;
@@ -63,18 +63,19 @@ button:hover{
   flex-direction: column;
   align-self: center;
   /* background-color: red; */
-  height: 150px;
+  height: 15vw;
+  margin-top: -3vw;
   justify-content: space-evenly;
 }
 
 .signUpButton{
-  font-size: 40px;
+  font-size: 4vw;
   font-weight: bolder;
   margin-top: -5vh;
 }
 
 .homeRegisterButton{
-  font-size: 40px;
+  font-size: 4vw;
   font-weight: bolder;
 }
 
@@ -246,13 +247,14 @@ button:hover{
 
 .unitDefinition{
   display:flex;
-  max-width:95;
+  min-width:55vw;
   align-items: left;
   color:white;
   /* background-color: blue; */
   padding-left: 10px;
   /* margin-left: 10px; */
   padding-right: 10px;
+  overflow-wrap: break-word;
 }
 
 
@@ -348,11 +350,12 @@ button:hover{
 }
 
 .itemDivider{
-  width:68vw;
+  width:95%;
   height:.4vh;
   background-color: white;
   align-self: center;
   margin-bottom: 2.5vh;
+  margin-left: 10px;
 }
 
 .toggleEditItem{
@@ -398,6 +401,7 @@ button:hover{
 
 .itemName{
   display:flex;
+  width:95%;
   font-size: 30px;
   font-weight: bolder;
   color: white;
@@ -495,9 +499,22 @@ button:hover{
   align-self: center;
 }
 
+.uploaded{
+  margin-top: -1.5vw;
+  margin-bottom: .25vw;
+  font-weight: bold;
+}
+
+.uploadSubmit{
+  width: fit-content;
+  display: flex;
+  align-self: center;
+  margin-top: -1.5vw;
+}
+
 .changeProfileButtons{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width:15vw;
   margin-top: -3vh;
 }

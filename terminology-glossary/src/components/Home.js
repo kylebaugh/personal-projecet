@@ -7,7 +7,7 @@ const Home = () => {
         <div className='border'>
             <div className='homeBorder'></div>
             <div className='homePage'>
-                    <h1 className='homeWelcome'>Welcome to your DevMountain Unit Glossary!</h1>
+                    <h1 className='homeWelcome'>Welcome to your<br></br>DevMountain Unit Glossary!</h1>
                     <div className='homeOptions'>
                         <Link to='/login'>
                             <button className='signUpButton'>Login/Sign Up</button>

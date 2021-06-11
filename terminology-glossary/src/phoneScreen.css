@@ -194,6 +194,7 @@
     
     .unitDefinition{
       /* display:none; */
+      max-width:95%;
       /* width:90%; */
       /* margin-left: -10; */
     }

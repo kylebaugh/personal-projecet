@@ -50,6 +50,7 @@ const Profile = (props) => {
 
     const toggleDropzone = () => {
         setShowDropzone(!showDropzone)
+        setUrl('')
     }
 
     const getSignedRequest = ([file]) => {
@@ -112,6 +113,8 @@ const Profile = (props) => {
                 console.log('yay')
                 console.log(res.data)
                 dispatch(setUser(res.data))
+                setUrl('')
+                setShowDropzone(!showDropzone)
                 // window.location.reload()
             })
             .catch(err => {
@@ -134,11 +137,13 @@ const Profile = (props) => {
 
                     <div className='profilePagePic'>
                         <img className='profilePic' src={user.picture} alt='User Profile Pic'/>
-                        {!showDropzone && <button className='changeProfile' onClick={() => {toggleDropzone()}}>Change Profile Pic</button>}
+                        {!showDropzone && <button className='changeProfile' onClick={() => {toggleDropzone()}}>Change Profile Picture</button>}
                         {showDropzone && <div className='changeProfileButtons'>
                         <button onClick={() => {toggleDropzone()}}>Cancel</button>
-                        <button onClick={() => {changeImage()}}>Submit</button>
+                        {/* <button onClick={() => {changeImage()}}>Submit</button> */}
                         </div>}
+                        {url && <p className='uploaded'>Image Uploaded!</p>}
+                        {url && <button className='uploadSubmit' onClick={() => {changeImage()}}>Submit</button>}
                         
                         {showDropzone && 
                             <Dropzone
@@ -159,7 +164,7 @@ const Profile = (props) => {
                             <p>Account Type: Administrator</p>
                             <p>Items Created: {userItems.length}</p>
                         </section>}
-                        {user && !user.is_admin && <section className='profileDetails'>
+                        {user && !user.is_admin && <section className='profileDetails'> 
                             <p>Account Type: User</p>
                             <p>Items Saved: {learnCount.length}</p>
                         </section>}
