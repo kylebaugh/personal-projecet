@@ -1,0 +1,139 @@
+
+.profilePage{
+    min-height:79vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    color:white
+  }
+  
+  .profileDivider{
+    width:73vw;
+    height:.4vh;
+    background-color: white;
+    align-self: center;
+    margin-bottom: 2.5vh;
+  }
+  
+  .profileDiv{
+    display: flex;
+    justify-content: center;
+    gap:2vw;
+    align-content: space-between;
+  }
+  
+  .profilePic{
+    width: 15vw;
+    height: 15vw;
+    align-self: center;
+  }
+  
+  .profilePagePic{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-right: 25px;
+    padding-left: -2vw;
+  }
+  
+  .changeProfile{
+    margin-top: -3vh;
+    max-width: 20vw;
+    display: flex;
+    /* justify-content: center; */
+    align-self: center;
+  }
+  
+  .uploaded{
+    margin-top: -1.5vw;
+    margin-bottom: .25vw;
+    font-weight: bold;
+  }
+  
+  .uploadSubmit{
+    width: fit-content;
+    display: flex;
+    align-self: center;
+    margin-top: -1.5vw;
+  }
+  
+  .changeProfileButtons{
+    display: flex;
+    justify-content: center;
+    width:15vw;
+    margin-top: -3vh;
+  }
+  
+  
+  .profileDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 15vw;
+    min-height: 19vh;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    margin-top: -3vh;
+    margin-bottom: 3vh;
+    align-self: center;
+  }
+  
+  .termTop{
+    font-size: 20px;
+    padding-top: 1.5vh;
+    font-weight: bold;
+  }
+  
+  .printButton{
+    width: fit-content;
+    align-self: center;
+    margin-bottom: 1vh;
+  }
+  
+  .myTerms{
+    width:49.5vw;
+    min-height: 55vh;
+    border-style: solid;
+    border-color: white;
+    /* background-color: green; */
+    margin-bottom: 2.5vh;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+  }
+  .termSpace{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    padding-bottom: 1vw;
+  }
+  
+  .dropzone{
+    position: inherit;
+    align-self: center;
+    align-content: center;
+    width: 15vw;
+    min-height: 10vh;
+    border-width: 5px;
+    margin-top: -2vh;
+    /* background-color: yellow; */
+    /* padding */
+    /* padding-bottom: 2vh; */
+    border-color: white;
+    border-style: dashed;
+    border-radius: 5%;
+    display: inline-block;
+    font-size: 17;
+  }
+  
+  .dropzone:hover{
+    border-color: black;
+    cursor:pointer;
+    color:black;
+  }
+  
+  .dropText{
+    /* background-color: green; */
+    margin-top: 1.5vh;
+  }

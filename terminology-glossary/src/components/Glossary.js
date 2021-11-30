@@ -4,6 +4,7 @@ import {useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {Link} from 'react-router-dom'
 import Topics from './Topics'
+import Header from './Header'
 
 const Glossary = (props) => {
     const dispatch = useDispatch()
@@ -22,16 +23,16 @@ const Glossary = (props) => {
     }, [dispatch])
 
     return (
-         <div className='border'>
-            <div className='homeBorder'></div>
+        <div class='glossaryBackground'>
+            <Header />
             <div className='glossaryPage'>
                 <h1 style={{color:'white'}}>Unit Breakdown</h1>
                 {units.map((unit) => {
                     return (
-                            <div className='unitBox'
-                            key={unit.unit_id}
-                            id={unit.unit_id}
-                            >
+                        <div className='unitBox'
+                        key={unit.unit_id}
+                        id={unit.unit_id}
+                        >
                                 <Link to={`/unit/${unit.unit_id}`} className='unitLink'>
                                     <section className='unitName'>
                                         {unit.name} Topics
@@ -44,7 +45,6 @@ const Glossary = (props) => {
                     )
                 })}
             </div>
-            <div className='homeBorder'></div>
         </div>
     )
 }

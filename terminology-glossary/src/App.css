@@ -6,12 +6,10 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  /* background-color: lightblue; */
-  background-image: url('https://devmountain.com/wp-content/uploads/2020/08/get-course.jpg');
-  /* url('https://devmountain.com/wp-content/uploads/2020/10/Home-Banner-Video.jpg'),  */
   background-repeat: none;
   background-size: cover;
-  min-height: 100vh
+  min-height: 100vh;
+  background-color: rgb(232,232,232);
 }
 
 button:hover{
@@ -28,99 +26,76 @@ button:hover{
   height: 3vh;
 }
 
-
-/* HOME PAGE */
-
-.border{
-  display: flex;
-}
-
-
-.homeBorder{
-  width:10vw;
-  min-height: 80vh;
-  background-color: rgb(232, 232, 232);
-}
-
-.homePage{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width:80vw;
-  height:79vh;
-}
-
-.homeWelcome{
-  font-size: 5vw;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-weight: bolder;
-  color:white
-}
-
-.homeOptions{
-  display:flex;
-  flex-direction: column;
-  align-self: center;
-  /* background-color: red; */
-  height: 15vw;
-  margin-top: -3vw;
-  justify-content: space-evenly;
-}
-
-.signUpButton{
-  font-size: 4vw;
-  font-weight: bolder;
-  margin-top: -5vh;
-}
-
-.homeRegisterButton{
-  font-size: 4vw;
-  font-weight: bolder;
-}
-
-.ricky{
-  font-size: 25px;
-  font-weight: bolder;
-  color:white;
-}
-
-.rickyPage{
-  height:79vh;
-}
-
 /* HEADER PAGE */
 
 .headerHeader{
   display: flex;
-  height: 15vh;
+  height: 10vh;
   justify-content: space-between;
   align-items: center;
-  background-color: lightcyan;
+  /* background-color: rgba(164, 248, 248, 0.265); */
   padding-left: 10px;
   padding-right: 10px;
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-size: 25px ;
-  color: blue;
-  text-decoration: blue;
+
+}
+
+.headerHeader2{
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 25px ;
+
+}
+
+.newLogo{
+  display:flex;
+  font-size: 20px;
+  color: white;
+  text-align: left;
+}
+
+.newLogoText{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: .75vh;
+  
+}
+
+.logoText1{
+  font-size: 24px;
+  /* letter-spacing: -.5px; */
+}
+
+.logoText2{
+  font-size: 16px;
 }
 
 .headerIcon{
   display: flex;
-  height: 15vh;
+  height: 8vh;
+  margin-top: 1vh;
   justify-content: space-between;
   align-items: center;
-  background-color: lightcyan;
-  padding-left: 10px;
-  padding-right: 10px;
+  /* background-color: rgba(164, 248, 248, 0.365); */
+  padding-left: 2.5vw;
   font-family:Georgia, 'Times New Roman', Times, serif;
-  font-size: 25px ;
+  /* font-size: 25px ; */
   cursor:pointer;
 }
 
+
+
 .headerMenu{
-  padding-right: 15px;
+  padding-right: 2.5vw;
   display: flex;
+
 }
 
 .headerMenuIcon{
@@ -137,6 +112,8 @@ button:hover{
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  background-color: none;
+
 }
 
 .menuBox:hover{
@@ -148,12 +125,15 @@ button:hover{
   width: 5vh;
   background-color: black;
   border-radius: 25%;
+  background-color: none;
+
 }
 
 .headerMenuItem{
   margin-right: 20px;
-  color: black;
-  text-decoration:black;
+  color: white;
+  text-decoration:white;
+  background-color: none;
 }
 
 .headerMenuItem:hover{
@@ -166,429 +146,3 @@ button:hover{
 }
 
 
-
-/* "GLOSSARY" PAGE */
-
-.glossaryPage{
-  background-image: url('https://devmountain.com/wp-content/uploads/2020/08/get-course.jpg');
-  background-repeat: none;
-  background-size: cover;
-  min-height:80vh;
-  width:80vw;
-  padding-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.glossaryPageName{
-  color:white;
-
-}
-
-
-/* UNIT PAGE */
-.unitPage{
-  background-image: url('https://devmountain.com/wp-content/uploads/2020/08/get-course.jpg');
-  height:fit-content;
-  padding-bottom: 30px;
-  width: 80vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* background-color: green; */
-}
-
-.unitBox{
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  align-items: center;
-  justify-content: center;
-  min-height: 30vh;
-  width: 70vw;
-  margin-bottom: 25px;
-  padding-left: 2vw;
-  padding-right: 2vw;
-  padding-bottom: 10px;
-  border-style: solid;
-  border-color: white;
-  /* background-color: green; */
-}
-
-.unitLink{
-  text-decoration: none;
-}
-
-.unitName:hover{
-  cursor:pointer;
-  color:black;
-}
-
-.unitName{
-  display:flex;
-  font-size: 30px;
-  font-weight: bolder;
-  color: white;
-  margin-left: 10px;
-  margin-top: 15px;
-  text-decoration: underline;
-}
-
-.unitDefinitionHead{
-  font-size: 20px;
-  display:flex;
-  align-items: left;
-  color:white;
-  /* background-color: green; */
-  margin-left: 10px;
-  padding-right: 10px;
-}
-
-.unitDefinition{
-  display:flex;
-  min-width:55vw;
-  align-items: left;
-  color:white;
-  /* background-color: blue; */
-  padding-left: 10px;
-  /* margin-left: 10px; */
-  padding-right: 10px;
-  overflow-wrap: break-word;
-}
-
-
-/* LOGIN PAGE */
-
-.loginPage{
-  display:flex;
-  flex-direction: row;
-  width: 80vw;
-  height: 79vh;
-  justify-content: space-evenly;
-  /* align-content: flex-start; */
-
-}
-
-.log{
-  display:flex;
-  flex-direction: column;
-  width: 150px;
-  height: 25vh;
-  color:white;
-  /* background-color: green; */
-  align-self: flex-start;
-  margin-top: 20vh;
-
-}
-
-.loginDivider{
-  margin-top: 3vh;
-  width:.5px;
-  height:65vh;
-  border-style: solid;
-  border-color: white;
-  align-self: center;
-  background-color: white;
-}
-
-.reg{
-  display:flex;
-  flex-direction: column;
-  align-self: flex-start;
-  width:150px;
-  /* background-color: green; */
-  margin-top: 20vh;
-
-}
-
-.adminCheckbox{
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.register{
-  color:white
-}
-
-.loginButton{
-  margin-top: 15px;
-  font-size: 20px;
-  font-weight: bolder;
-}
-
-.registerButton{
-  font-size: 20px;
-  font-weight: bolder;
-}
-
-.registration{
-  color:white;
-  width:200px;
-  align-self: center;
-  padding-top: 10px;
-}
-
-
-/* GLOSSARY ITEMS */
-
-.itemBox{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  height: fit-content;
-  width: 70%;
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-bottom: 25px;
-  /* padding: 10px; */
-  border-style: solid;
-  border-color: white;
-}
-
-.itemDivider{
-  width:95%;
-  height:.4vh;
-  background-color: white;
-  align-self: center;
-  margin-bottom: 2.5vh;
-  margin-left: 10px;
-}
-
-.toggleEditItem{
-  padding-left: 10px;
-  padding-bottom: 15px;
-}
-
-.addSection{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: left;
-  width:45vw;
-  padding-bottom: 10px;
-}
-
-.addItemBox{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.addAddButton{
-  width: 100px;
-  align-self: center;
-  margin-bottom: 10px;
-}
-
-.addSubmitButton{
-  width:100px;
-  align-self: center;
-}
-
-.addName{
-  width:44.2vw;
-}
-
-.addDefinition{
-  width:44.2vw;
-  height:200px;
-  margin-bottom: 10px;
-}
-
-.itemName{
-  display:flex;
-  width:95%;
-  font-size: 30px;
-  font-weight: bolder;
-  color: white;
-  margin-left: 10px;
-  margin-top: 15px;
-  text-decoration: none;
-}
-
-.addToListButton{
-  margin-left: 10px;
-}
-
-.editItemBox{
-  display:flex;
-  flex-direction: column;
-}
-
-.newName{
-  width:375px;
-}
-
-.newDefinition{
-  width:375px;
-  height:200px;
-}
-
-/* TOPICS PAGE */
-
-.topicSection{
-  max-height: 150px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  margin-left: 110px;
-
-}
-
-.topicList{
-  display: flex;
-  min-width:20vw;
-  color:white;
-  /* margin-left: 50px; */
-  gap:50px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  /* background-color: green; */
-}
-
-
-/* PROFILE PAGE */
-
-.profilePage{
-  min-height:79vh;
-  width: 80vw;
-  display: flex;
-  flex-direction: column;
-  color:white
-}
-
-.profileDivider{
-  width:73vw;
-  height:.4vh;
-  background-color: white;
-  align-self: center;
-  margin-bottom: 2.5vh;
-}
-
-.profileDiv{
-  display: flex;
-  justify-content: center;
-  gap:2vw;
-  align-content: space-between;
-}
-
-.profilePic{
-  width: 15vw;
-  height: 15vw;
-  align-self: center;
-}
-
-.profilePagePic{
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding-right: 25px;
-  padding-left: -2vw;
-}
-
-.changeProfile{
-  margin-top: -3vh;
-  max-width: 20vw;
-  display: flex;
-  /* justify-content: center; */
-  align-self: center;
-}
-
-.uploaded{
-  margin-top: -1.5vw;
-  margin-bottom: .25vw;
-  font-weight: bold;
-}
-
-.uploadSubmit{
-  width: fit-content;
-  display: flex;
-  align-self: center;
-  margin-top: -1.5vw;
-}
-
-.changeProfileButtons{
-  display: flex;
-  justify-content: center;
-  width:15vw;
-  margin-top: -3vh;
-}
-
-
-.profileDetails{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 15vw;
-  min-height: 19vh;
-  color: white;
-  border-style: solid;
-  border-color: white;
-  margin-top: -3vh;
-  margin-bottom: 3vh;
-  align-self: center;
-}
-
-.termTop{
-  font-size: 20px;
-  padding-top: 1.5vh;
-  font-weight: bold;
-}
-
-.printButton{
-  width: fit-content;
-  align-self: center;
-  margin-bottom: 1vh;
-}
-
-.myTerms{
-  width:49.5vw;
-  min-height: 55vh;
-  border-style: solid;
-  border-color: white;
-  /* background-color: green; */
-  margin-bottom: 2.5vh;
-  padding-top: 1.5vh;
-  padding-bottom: 1.5vh;
-}
-.termSpace{
-  display: flex;
-  justify-content: space-between;
-  padding-left: 1.5vw;
-  padding-right: 1.5vw;
-  padding-bottom: 1vw;
-}
-
-.dropzone{
-  position: inherit;
-  align-self: center;
-  align-content: center;
-  width: 15vw;
-  min-height: 10vh;
-  border-width: 5px;
-  margin-top: -2vh;
-  /* background-color: yellow; */
-  /* padding */
-  /* padding-bottom: 2vh; */
-  border-color: white;
-  border-style: dashed;
-  border-radius: 5%;
-  display: inline-block;
-  font-size: 17;
-}
-
-.dropzone:hover{
-  border-color: black;
-  cursor:pointer;
-  color:black;
-}
-
-.dropText{
-  /* background-color: green; */
-  margin-top: 1.5vh;
-}

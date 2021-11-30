@@ -3,6 +3,7 @@ import {getUnit} from '../redux/glossaryReducer'
 import {useEffect, useState} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import Item from './Item'
+import Header from './Header'
 
 const Unit = (props) => {
     const dispatch = useDispatch()
@@ -36,8 +37,8 @@ const Unit = (props) => {
     }
 
     return (
-        <div className='border'>
-            <div className='homeBorder'></div>
+        <div class='unitBackground'>
+            <Header />
             <div className='unitPage'>
                 <h1 className='glossaryPageName'>Unit {props.match.params.unit_id}</h1>
                 <div className='addSection'>
@@ -65,7 +66,6 @@ const Unit = (props) => {
                     })
                 }
             </div>
-            <div className='homeBorder'></div>
         </div>
     )
 }

@@ -3,6 +3,7 @@ import {setUser} from '../redux/authReducer'
 import {useDispatch, useSelector} from 'react-redux'
 import {useState, useEffect} from 'react'
 import {useHistory} from 'react-router-dom'
+import Header from './Header'
 
 
 const Login = (props) =>{
@@ -64,8 +65,8 @@ const Login = (props) =>{
     }
 
     return (
-        <div className='border'>
-            <div className='homeBorder'></div>
+        <div class='loginBackground'>
+            <Header />
             <div className='loginPage'>
                 <div className='reg'>
                     <h1 className='register'>Sign Up!</h1>
@@ -90,7 +91,6 @@ const Login = (props) =>{
                         <button className='loginButton' onClick={handleLogin}>Login</button>
                 </div>
             </div>
-            <div className='homeBorder'></div>
         </div>
     )
 }

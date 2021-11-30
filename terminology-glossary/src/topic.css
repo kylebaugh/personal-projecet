@@ -1,0 +1,23 @@
+/* TOPIC SECTION */
+
+.topicSection{
+    max-height: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-left: 110px;
+  
+  }
+  
+  .topicList{
+    display: flex;
+    min-width:20vw;
+    color:white;
+    /* margin-left: 50px; */
+    gap:50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* background-color: green; */
+  }
+  

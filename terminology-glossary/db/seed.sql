@@ -13,6 +13,7 @@ CREATE TABLE users(
     picture TEXT
 );
 
+
 CREATE TABLE unit(
     unit_id SERIAL PRIMARY KEY,
     name VARCHAR(100)
