@@ -49,7 +49,13 @@ const Header = (props) => {
         <div>
 
             <div className='headerHeader'>
-                    {user && <img className='headerIcon' onClick={() => {toProfile()}} src={dmLogo} alt='DevMountainLogo'></img>}
+                    {user && <section class='newLogo'>
+                            <img className='headerIcon' onClick={() => {toHome()}} src={dmLogo} alt='DevMountainLogo'></img>
+                            <section class='newLogoText'>
+                                <text class='logoText1'>D E V M O U N T A I N</text>
+                                <text class='logoText2'>Part of Strayer University</text>
+                            </section>
+                        </section>}
                     {!user && <section class='newLogo'>
                             <img className='headerIcon' onClick={() => {toHome()}} src={dmLogo} alt='DevMountainLogo'></img>
                             <section class='newLogoText'>
