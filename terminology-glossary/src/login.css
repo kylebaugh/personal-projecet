@@ -1,0 +1,78 @@
+.loginBackground{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0,0,0, 0.35)), url('./assets/newDesk2.jpg');
+  background-repeat: none;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.loginPage{
+    display:flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 79vh;
+    justify-content: space-evenly;
+    /* align-content: flex-start; */
+  
+  }
+  
+  .log{
+    display:flex;
+    flex-direction: column;
+    width: 150px;
+    height: 25vh;
+    color:white;
+    /* background-color: green; */
+    align-self: flex-start;
+    margin-top: 20vh;
+  
+  }
+  
+  .loginDivider{
+    margin-top: 3vh;
+    width:.5px;
+    height:65vh;
+    border-style: solid;
+    border-color: white;
+    align-self: center;
+    background-color: white;
+  }
+  
+  .reg{
+    display:flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width:150px;
+    /* background-color: green; */
+    margin-top: 20vh;
+  
+  }
+  
+  .adminCheckbox{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .register{
+    color:white
+  }
+  
+  .loginButton{
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  
+  .registerButton{
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  
+  .registration{
+    color:white;
+    width:200px;
+    align-self: center;
+    padding-top: 10px;
+  }
+  

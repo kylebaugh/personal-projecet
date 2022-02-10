@@ -3,6 +3,7 @@ import {useState} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {useHistory} from 'react-router-dom'
 import {clearUser} from '../redux/authReducer'
+import dmLogo from '../assets/devLogo-removebg-preview.png'
 
 const Header = (props) => {
     const [toggleMenu, setTogglemenu] = useState(false)
@@ -48,9 +49,21 @@ const Header = (props) => {
         <div>
 
             <div className='headerHeader'>
-                    {user && <img className='headerIcon' onClick={() => {toProfile()}} src='https://mk0devmountainc07rxr.kinstacdn.com/wp-content/uploads/2020/10/devmountain-logo3.png' alt='DevMountainLogo'></img>}
-                    {!user && <img className='headerIcon' onClick={() => {toHome()}} src='https://mk0devmountainc07rxr.kinstacdn.com/wp-content/uploads/2020/10/devmountain-logo3.png' alt='DevMountainLogo'></img>}
-                <header className='headerHeader'>
+                    {user && <section class='newLogo'>
+                            <img className='headerIcon' onClick={() => {toHome()}} src={dmLogo} alt='DevMountainLogo'></img>
+                            <section class='newLogoText'>
+                                <text class='logoText1'>D E V M O U N T A I N</text>
+                                <text class='logoText2'>Part of Strayer University</text>
+                            </section>
+                        </section>}
+                    {!user && <section class='newLogo'>
+                            <img className='headerIcon' onClick={() => {toHome()}} src={dmLogo} alt='DevMountainLogo'></img>
+                            <section class='newLogoText'>
+                                <text class='logoText1'>D E V M O U N T A I N</text>
+                                <text class='logoText2'>Part of Strayer University</text>
+                            </section>
+                        </section>}
+                <div className='headerHeader2'>
                     <div className='headerMenu'>
                         <div className='shownMenu'>
                             {!user && <span className='headerMenuItem' onClick={() => {toHome()}}>Home</span>}
@@ -67,7 +80,7 @@ const Header = (props) => {
                             </div>
                             </div>
                     </div>
-                </header>
+                </div>
             </div>
 
             <div>

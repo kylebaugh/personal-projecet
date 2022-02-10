@@ -1,0 +1,77 @@
+.unitBackground{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0,0,0, 0.75)), url('../src/assets/seamless-g8943c593b_1920.jpg');
+  background-repeat: none;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.unitPage{
+    height:fit-content;
+    padding-bottom: 30px;
+    width: 99.2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    /* background-color: green; */
+  }
+  
+  .unitBox{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 30vh;
+    width: 70vw;
+    margin-bottom: 25px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 10px;
+    border-style: solid;
+    border-color: white;
+    /* background-color: green; */
+  }
+  
+  .unitLink{
+    text-decoration: none;
+  }
+  
+  .unitName:hover{
+    cursor:pointer;
+    color:black;
+  }
+  
+  .unitName{
+    display:flex;
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+    margin-left: 10px;
+    margin-top: 15px;
+    text-decoration: underline;
+  }
+  
+  .unitDefinitionHead{
+    font-size: 20px;
+    display:flex;
+    align-items: left;
+    color:white;
+    /* background-color: green; */
+    margin-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .unitDefinition{
+    display:flex;
+    min-width:55vw;
+    align-items: left;
+    color:white;
+    /* background-color: blue; */
+    padding-left: 10px;
+    /* margin-left: 10px; */
+    padding-right: 10px;
+    overflow-wrap: break-word;
+  }
+  

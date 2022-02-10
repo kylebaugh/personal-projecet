@@ -9,6 +9,7 @@ import {GridLoader} from 'react-spinners'
 import {useDispatch} from 'react-redux'
 import {v4 as randomString} from 'uuid'
 import {useHistory} from 'react-router-dom'
+import Header from './Header'
 
 
 const Profile = (props) => {
@@ -125,11 +126,12 @@ const Profile = (props) => {
 
     const handlePrint = () => {
       push('/learnMore')
+      // window.print()
     }
 
     return(
-        <div className='border'>
-            <div className='homeBorder'></div>
+        <div className='profileBackground'>
+          <Header />
             <div className='profilePage'>
                 <h1>{user.firstname}'s Profile</h1>
                 <div className='profileDivider'></div>
@@ -183,7 +185,6 @@ const Profile = (props) => {
                 
             </div>
 
-            <div className='homeBorder'></div>
         </div>
     )
 }

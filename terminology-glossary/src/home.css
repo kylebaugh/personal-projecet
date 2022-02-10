@@ -1,0 +1,94 @@
+.homeBackground{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0,0,0, 0.35)), url('./assets/newDesk2.jpg');
+  background-repeat: none;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.homeFull{
+  display:flex;
+  justify-content: center;
+  background-color: rgba(232, 232, 232, 0);
+}
+
+.border{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: none;
+    
+  }
+  
+  
+  /* .homeBorder{
+    width:10vw;
+    min-height: 90vh;
+    background-color: rgb(232, 232, 232);
+  } */
+  
+  .homePage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-self: center;
+    align-self: center;
+    /* width:80vw; */
+    height:79vh;
+  }
+  
+  .homeWelcome{
+    font-size: 5vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bolder;
+    color:white
+  }
+  
+  .homeOptions{
+    display:flex;
+    flex-direction: column;
+    align-self: center;
+    height: 15vw;
+    margin-top: -3vw;
+    justify-content: space-evenly;
+  }
+  
+  .signUpButton{
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 4vw;
+    font-weight: bolder;
+    margin-top: -5vh;
+    border-radius: 8px;
+  }
+
+  .signUpButton:hover{
+    background-color: cornflowerblue;
+    cursor:pointer
+  }
+
+  .homeRegisterButton:hover{
+    background-color: cornflowerblue;
+    cursor:pointer
+  }
+  
+  .homeRegisterButton{
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 4vw;
+    font-weight: bolder;
+    border-radius: 8px;
+  
+  }
+  
+  .ricky{
+    font-size: 25px;
+    font-weight: bolder;
+    color:white;
+  }
+  
+  .rickyPage{
+    height:79vh;
+  }
