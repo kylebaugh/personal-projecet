@@ -1,6 +1,7 @@
 import axios from 'axios'
 import {useSelector} from 'react-redux'
 import {useEffect, useState} from 'react'
+import FlashCards from './flashCard'
 
 const LearnList = (props) => {
     const {user} = useSelector((state) => state.authReducer)
